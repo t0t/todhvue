@@ -51,11 +51,13 @@ export default {
   }
 }
 .CardContent {
+  background-color: $light_grey;
+  text-align: left;
+  @include media(s2) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-
-  background-color: $light_grey;
+  }
 }
 .CardHeader {
   padding-top: $h2;
@@ -74,7 +76,9 @@ export default {
   }
 }
 .CardBody {
-  padding: $h2;
+  margin-top: $h2;
+  padding-bottom: $h3;
+   
   @include media(s5) {
     padding-bottom: $h4;
     padding-top: $h4;

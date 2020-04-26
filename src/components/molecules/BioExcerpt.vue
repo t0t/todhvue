@@ -20,7 +20,7 @@ export default {
 @import "@/styles/main.scss";
 
 .BioExcerpt {
-  background-color: $white;
+  padding-top: $h3;
   @include media(s2) {
     padding-top: $h4;
     padding-bottom: $h3;

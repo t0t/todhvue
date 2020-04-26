@@ -122,6 +122,8 @@ h3 {
   font-size: $h1;
   padding-bottom: $h1;
   font-weight: bold;
+  padding-left: $h2;
+  padding-right: $h2;
   @include media(s1) {
     font-size: $h2;
     line-height: $h3;
@@ -179,10 +181,13 @@ h6 {
 p {
   font-size: $h1;
   padding-bottom: $h2;
+  text-align: left;
   @include media(s0) {
     font-size: $h0;
   }
   @include media(s1) {
+    padding-left: $h3;
+    padding-right: $h3;
     font-size: $h1;
     line-height: $h2;
   }
@@ -319,4 +324,19 @@ footer {
   height: 100px;
   width: 100px * $phi;
   // background-color: red;
+}
+
+// ****************************************
+// ANIMATIONS
+// ****************************************
+
+@keyframes menu {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

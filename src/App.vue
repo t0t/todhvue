@@ -2,6 +2,7 @@
   <div id="app">
     <div class="BrandToggle" role="logo" v-on:click="show = !show">
       <IcoLogo />
+      <div class="closemenu" v-if="show">Close X</div>
     </div>
     <nav id="MainNav" role="navigation">
       <transition name="fade">
@@ -22,12 +23,12 @@ import IcoLogo from "@/components/atoms/icons/IcoLogo.vue";
 export default {
   data: () => {
     return {
-      show: false
+      show: false,
     };
   },
   components: {
-    IcoLogo
-  }
+    IcoLogo,
+  },
 };
 </script>
 
@@ -41,26 +42,14 @@ export default {
   text-align: center;
 }
 
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.1s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
 .BrandToggle {
   position: fixed;
   top: $h2;
-  right: $h2;
-  width: $h4;
-  height: $h4;
-  border: none;
-  color: $white;
-  font-size: $h2;
-  font-weight: bold;
-  // background-color: $dark_grey;
+  right: 40%;
+  left: 40%;
+  // width: $h5;
+  // height: $h5;
+  // background-color: red;
   z-index: 2;
 
   &:hover {
@@ -81,23 +70,32 @@ export default {
     width: $h4;
     height: $h4;
   }
+  .closemenu {
+    color: $white;
+  }
 }
 #MainNav {
   ul {
     position: fixed;
-    right: $h4;
     top: 0;
-    display: flex;
-    align-items: center;
-    z-index: 1;
+    height: $h6;
+    width: 100%;
+    right: 0;
     padding: 0;
-    height: $h4;
-    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+    @include media(s1) {
+      transform: translateY(0);
     background-color: $dark_grey;
-    // @include media(s1) {
-    //   top: $h2;
-    //   right: $h2;
-    // }
+    }
+    @include media(s2) {
+      right: 0;
+      padding: 0;
+      height: $h4;
+      background-color: $dark_grey;
+    }
   }
   a {
     color: $white;
@@ -128,5 +126,13 @@ export default {
       }
     }
   }
+  .fade-enter-active {
+     animation: menu .1s 1;
+  }
+  .fade-leave-active {
+     animation: menu .1s 1;
+     animation-direction: alternate-reverse;
+  }
+  
 }
 </style>

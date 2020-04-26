@@ -28,8 +28,8 @@ export default {
     feature2: String,
     feature2b: String,
     feature3: String,
-    feature3b: String
-  }
+    feature3b: String,
+  },
 };
 </script>
 
@@ -37,8 +37,11 @@ export default {
 @import "@/styles/main.scss";
 
 .Features {
-  padding: $h2 $h2 0 $h2;
   background-color: $white;
+  padding: $h2;
+  @include media(s1) {
+    padding-bottom: $h3;
+  }
   @include media(s5) {
     padding: $h4;
   }

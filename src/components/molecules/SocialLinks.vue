@@ -64,15 +64,14 @@ export default {
 
 .SocialLinks {
   padding: 0;
+  margin-left: 0;
   li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   a {
-    // margin-right: $h0;
     @include media(s1) {
-      // margin-right: $h2;
       width: $h3;
     }
     svg {
