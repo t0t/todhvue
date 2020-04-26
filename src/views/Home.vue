@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Cover
+      title="sergio fores"
+      subtitle="Original 3D-printed Artwork & Modern prototyping for the web"
+      bgimg="img4.jpg"
+    />
+    <Footer />
   </div>
+  <!-- <div v-else>Loading...</div> -->
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Cover from "@/components/organos/Cover.vue";
+import Footer from "@/components/molecules/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    Cover,
+    Footer
   }
 };
 </script>
+
+<style lang="scss">
+@import "@/styles/main.scss";
+
+.home .Cover {
+  height: 100vh;
+  // flex-wrap: nowrap;
+}
+</style>

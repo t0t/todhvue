@@ -1,31 +1,131 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="BrandToggle" role="logo" v-on:click="show = !show">
+      <IcoLogo />
     </div>
+    <nav id="MainNav" role="navigation">
+      <transition name="fade">
+        <ul v-if="show">
+          <router-link to="/artwork">Artwork</router-link>
+          <router-link to="/design">Prototyping</router-link>
+          <router-link to="/info">TODH</router-link>
+        </ul>
+      </transition>
+    </nav>
     <router-view />
   </div>
 </template>
 
+<script>
+import IcoLogo from "@/components/atoms/icons/IcoLogo.vue";
+
+export default {
+  data: () => {
+    return {
+      show: false
+    };
+  },
+  components: {
+    IcoLogo
+  }
+};
+</script>
+
 <style lang="scss">
+@import "@/styles/main.scss";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: $primary_font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.BrandToggle {
+  position: fixed;
+  top: $h2;
+  right: $h2;
+  width: $h4;
+  height: $h4;
+  border: none;
+  color: $white;
+  font-size: $h2;
+  font-weight: bold;
+  // background-color: $dark_grey;
+  z-index: 2;
+
+  &:hover {
+    cursor: pointer;
+  }
+  & path.sentir {
+    fill: $white;
+    stroke: none;
+  }
+  & path.hacer {
+    stroke: $dark_grey;
+    stroke-width: 0.5px;
+  }
+  & circle {
+    fill: $secondary;
+  }
+  svg {
+    width: $h4;
+    height: $h4;
+  }
+}
+#MainNav {
+  ul {
+    position: fixed;
+    right: $h4;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    padding: 0;
+    height: $h4;
+    margin-right: 0;
+    background-color: $dark_grey;
+    // @include media(s1) {
+    //   top: $h2;
+    //   right: $h2;
+    // }
+  }
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
+    color: $white;
+    padding: $h0;
+    @include media(s1) {
+      padding: $h0;
+      background-color: $secondary;
+      font-size: $h1;
+    }
+    @include media(s2) {
+      display: block;
+      padding: $h1;
+      background-color: transparent;
+      font-size: $h1;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+    @include media(s4) {
+      font-size: $h2;
+    }
     &.router-link-exact-active {
-      color: #42b983;
+      color: $tertiary;
+      border-bottom: $h-1 solid $black_light;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
