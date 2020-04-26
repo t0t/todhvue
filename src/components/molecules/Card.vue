@@ -24,13 +24,13 @@ export default {
     bgimg: String,
     title: String,
     subtitle: String,
-    text: String
+    text: String,
   },
   computed: {
     imgurl() {
       return require("@/assets/" + this.bgimg);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -54,15 +54,21 @@ export default {
   background-color: $light_grey;
   text-align: left;
   @include media(s2) {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 .CardHeader {
   padding-top: $h2;
   padding-left: $h2;
   padding-right: $h2;
+  h4 {
+    @include media(s2) {
+      margin-left: $h1;
+      padding-right: $h2;
+    }
+  }
   @include media(s5) {
     padding-top: $h4;
     padding-left: 0;
@@ -71,14 +77,12 @@ export default {
     small {
       line-height: $h3;
     }
-    h4 {
-    }
   }
 }
 .CardBody {
   margin-top: $h2;
   padding-bottom: $h3;
-   
+
   @include media(s5) {
     padding-bottom: $h4;
     padding-top: $h4;
@@ -86,9 +90,15 @@ export default {
     padding-right: 0;
   }
   p {
+    @include media(s2) {
+      // background-color: red;
+      padding-left: 0;
+      padding-right: $h3;
+      margin: 0;
+    }
     @include media(s5) {
-      margin-right: $h4;
-      margin-left: $h4;
+      // margin-right: $h4;
+      // margin-left: $h4;
     }
   }
 }

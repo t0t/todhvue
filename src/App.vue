@@ -47,11 +47,7 @@ export default {
   top: $h2;
   right: 40%;
   left: 40%;
-  // width: $h5;
-  // height: $h5;
-  // background-color: red;
   z-index: 2;
-
   &:hover {
     cursor: pointer;
   }
@@ -73,6 +69,14 @@ export default {
   .closemenu {
     color: $white;
   }
+  @include media(s4) {
+    width: $h5;
+    top: 0;
+    height: $h4;
+    right: 0;
+    left: auto;
+    padding-top: $h1;
+  }
 }
 #MainNav {
   ul {
@@ -86,15 +90,17 @@ export default {
     justify-content: center;
     align-items: flex-end;
     z-index: 1;
+    background-color: $alpha_black;
     @include media(s1) {
       transform: translateY(0);
-    background-color: $dark_grey;
     }
     @include media(s2) {
       right: 0;
       padding: 0;
+      height: $h6;
+    }
+    @include media(s4) {
       height: $h4;
-      background-color: $dark_grey;
     }
   }
   a {
