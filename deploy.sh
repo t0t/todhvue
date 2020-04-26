@@ -1,65 +1,28 @@
-# 🏄TODH - holistic prototype
+#!/usr/bin/env sh
 
-Living prototype based on a systemic-functional paradigm. 
+# abort on errors
+set -e
 
-- Acción contínua incremental.
-- Instantly prototype new ideas
-
-## Mi propósito
-
-Enfocado en encontrar interconexiones sistémicas eficientes entre ideas y hechos, desde una visión holística del proceso creativo donde el todo es más que la suma de sus partes.
-
-## Goal
-
-I give my clients a very basic functional prototype as starting point with functionality and desired tech stack and then developers could give it superpowers bringing it to the next level.
-
-## Tech stack 
-
-- JAMstack based philosophy
-- Vuejs CLI
-- Prismic (or similar) for CMS
-- Componentized System Design
-- Github Pages / Netlify for hosting
-
-------------------
-
-## 2 step deploy on Gh-pages
-```
-chmod +x deploy.sh 
-```
-Run command from project root:
-```
-./deploy.sh
-```
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
+# build
 npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+# navigate into the build output directory
+cd dist
 
-### Todo List
-- [x] Change favicon & title page
-- [x] Inline svg with Nucleo Icons
-- [x] Routing in Vue
-- [ ] Prismic implementation
-- [ ] https://codingpotions.com/vue-slots
+# if you are deploying to a custom domain
+echo 't-o-d-h.com' > CNAME
 
+git init
+git add -A
+git commit -m 'deploy'
 
-### Configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-See [Guide](https://cli.vuejs.org/guide/).
+# if you are deploying to https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:t0t/todh.git master:gh-pages
+
+# En caso de no tener configurado su cuenta de GitHub para conectarse via SSH
+# git push -f https://github.com/t0t/todh.git master:gh-pages
+
+cd -
