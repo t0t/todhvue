@@ -1,13 +1,13 @@
 <template>
   <div class="Gallery">
-    <a class="prev" @click.self.prevent="prev" href="#">&#10094; </a>
       <figure v-for="i in [currentIndex]" :key="i">
         <img v-bind:src="require('@/assets/' + currentImg)" />
-        <figcaption>
+        <!-- <figcaption>
           <span class="title">Title</span>
           <span class="description">Description</span>
-        </figcaption>
+        </figcaption> -->
       </figure>
+    <a class="prev" @click.self.prevent="prev" href="#">&#10094; </a>
     <a class="next" @click.self.prevent="next" href="#">&#10095; </a>
   </div>
 </template>
@@ -60,28 +60,32 @@ export default {
 
 .Gallery {
   width: 100%;
-  height: auto;
+  height: $h8;
   padding-top: $h2;
-  padding-bottom: $h5;
+  padding-bottom: $h2;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: opacity 2s ease;
   background-color: $dark_grey;
+  display: flex;
+  justify-content: center;
   span {
-    position: relative;
-  }
+    }
   figure {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
   }
-  figcaption {
-    display: flex;
-    flex-direction: column;
-    color: $white;
-  }
+  // figcaption {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   // flex-direction: column;
+  //   align-items: center;
+  //   color: $white;
+  // }
   .title {
     padding-bottom: $h1;
     color: $white;
