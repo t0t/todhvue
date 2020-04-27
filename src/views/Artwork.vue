@@ -6,7 +6,7 @@
       bgimg="img11.jpg"
     />
 
-    <!-- <Gallery /> -->
+    <Gallery />
 
     <BioExcerpt
       texto1="Incursión a la Creación misma"
