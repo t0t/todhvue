@@ -14,7 +14,7 @@
 export default {
   data: () => {
     return {
-      open: false
+      open: false,
     };
   },
   props: ["item", "active"],
@@ -22,10 +22,10 @@ export default {
     backgroundImage() {
       return {
         "background-image":
-          "url(" + require("../../assets" + this.item.img) + ")"
+          "url(" + require("../../assets" + this.item.img) + ")",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

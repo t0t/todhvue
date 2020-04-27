@@ -113,6 +113,12 @@
       "arte": {
         "title": "Titulo",
         "areas": ["Pinturas 3D", ""],
+        "gallery": [
+          "img1.jpg",
+          "img2.jpg",
+          "img3.jpg",
+          "img4.jpg"
+        ],
         "slogans": [
           {
             "personal": "El misterio de la Creación",

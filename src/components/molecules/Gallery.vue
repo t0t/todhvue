@@ -1,28 +1,118 @@
 <template>
-  <section>
-    <ul class="Gallery" :style="listLength">
-      <li v-for="(obra, index) in obras" :key="index" :style="listPosition">
-        <GalleryItem :item="obra" :active="index == currentIndex" />
-      </li>
-    </ul>
-  </section>
+  <div id="gallery" class="Gallery">
+    <p>{{images[0].img_src}}</p>
+    <p>{{images[1].img_src}}</p>
+    <transition-group name="fade" tag="div">
+      <div v-for="i in [currentIndex]" :key="i">
+        <img v-bind:src="require('@/assets/'+ currentImg)" />
+        <!-- require('../assets/img/covers/' + story.cover) -->
+      </div>
+    </transition-group>
+    <a class="prev" @click.self.prevent="prev" href="#">&#10094; Previous</a>
+    <a class="next" @click.self.prevent="next" href="#">&#10095; Next</a>
+  </div>
 </template>
 
 <script>
-import GalleryItem from "@/components/molecules/GalleryItem";
+import todh_data from "@/data";
+console.log(todh_data.main_personal_areas[0].arte.gallery);
 
 export default {
   name: "Gallery",
-  components: {
-    GalleryItem,
-  }
+  // 1. We got an array of image URLs from Pixabay.
+  data: () => {
+    return { 
+      images: todh_data.main_personal_areas[0].arte.gallery,
+      timer: null,
+      currentIndex: 0,
+      // 2. Set timer to null and set currentIndex to 0 for showing the first image.
+    };
+  },
+  mounted: function () {
+    this.startSlide();
+    // 3. Created startSlide function for sliding images every 4 seconds.
+  },
+  methods: {
+    startSlide: function () {
+      this.timer = setInterval(this.next, 4000);
+    },
+    // Created next and prev functions for sliding to the previous or the next image. According to the last currentImg function it detects which image must show at that time based on the index.
+    next: function() {
+      this.currentIndex += 1;
+    },
+    prev: function() {
+      this.currentIndex -= 1;
+    },
+  },
+  computed: {
+    
+    currentImg: function() {
+      return this.images[Math.abs(this.currentIndex) % this.images.length];
+    }
+  },
 };
 /* eslint-disable */
 </script>
 
 <style lang="scss">
 @import "@/styles/main.scss";
+// @import '../node_modules/swiper/css/swiper.css';
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.9s ease;
+  overflow: hidden;
+  visibility: visible;
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-enter,
+.fade-leave-to {
+  visibility: hidden;
+  width: 100%;
+  opacity: 0;
+}
+
+img {
+  height: 600px;
+  width: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.7s ease;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
 .Gallery {
   margin-right: 0;
   margin-left: 0;
