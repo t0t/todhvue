@@ -39,7 +39,8 @@ export default {
   background-position: top;
   background-color: $primary;
   height: 50vh;
-  color: $white;
+  color: #00dcff;
+  font-weight: normal;
   @include media(s2) {
     height: 100vh;
   }

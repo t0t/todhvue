@@ -299,6 +299,28 @@ blockquote {
   color: $dark_grey;
 }
 
+figure {
+  // display: block;
+  // font-size: $h1;
+  // padding-top: $h2;
+  // line-height: $h1;
+  // background-color: $dark_grey;
+  // @include media(s0) {
+  //   font-size: $h0;
+  // }
+  // @include media(s1) {
+  //   font-size: $h1;
+  //   line-height: $h2;
+  // }
+  // @include media(s2) {
+  //   margin-left: $h4;
+  //   padding-right: $h4;
+  // }
+  // @include media(s5) {
+  //   font-size: $h2;
+  //   line-height: $h2;
+  // }
+}
 // ****************************************
 // LAYOUT | MARGINS... SPACES
 // ****************************************
