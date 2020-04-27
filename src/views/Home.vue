@@ -1,14 +1,8 @@
 <template>
   <div class="home">
-    <!-- <div 
-    v-for="cita in citas" v-bind:key="cita" 
-    >
-    <p>{{cita}} lorem </p>
-    </div> -->
-
-    <Cover
-      v-bind:title="data.author"
-      v-bind:subtitle="data.slogans[0].web"
+   <Cover
+      v-bind:title="titulo_web"
+      v-bind:subtitle="slogan_web"
       bgimg="img10.jpg"
     />
     <Footer />
@@ -30,9 +24,10 @@ export default {
   },
   data: () => {
     return {
-      data: todh_data
-    };
-  }
+      titulo_web: todh_data.author,
+      slogan_web: todh_data.slogans[0].web
+    }
+  },
 };
 </script>
 

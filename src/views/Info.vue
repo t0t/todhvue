@@ -1,25 +1,19 @@
 <template>
   <div class="info">
     <Cover
-      title="T-O-D-H"
-      subtitle="Observar. Discernir. Hacer. Transmitir."
+      v-bind:title="titulo_todh"
+      v-bind:subtitle="slogan_web"
       bgimg="svg_anim.svg"
     />
 
     <Card
       bgimg="svg_anim.svg"
-      title='"Todo según el peso, el número y la medida."'
-      subtitle="Pitágoras. 500 a.C."
-      text="Así, orbitando varios mundos como son la tecnología, el arte y la
-        sabiduría antigua, Sergio afianza con los años un corpus discursivo y
-        práctico que llama TODH en torno al
-        proceso mismo de la Creación y su dimensión estructural
-        holística. En este sentido su proyecto aboga por una reconexión
-        incursiva con la verdad que nos habita. Podríamos decir que su mirada
-        se centra en las experiencias antes que en los objetos o los productos,
-        defendiendo el desarrollo de la mente abstracta frente al de la mente
-        concreta."
+      v-bind:title="cita_todh.frase"
+      v-bind:subtitle="cita_todh.autor"
+      v-bind:text="cita_todh.bloque"
     />
+
+    
     <BioExcerpt
       texto1="Una visión basada en hechos reales"
       texto2="Desde la tecnología, el arte y la
@@ -54,29 +48,19 @@
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
 
-      <List
-        texto1="Elemento de lista 1"
-        texto2="Otro elemento"
-        texto3="Otro elemento"
-        texto4="Otro elemento"
-        texto5="Otro elemento..."
-        texto6=""
-      />
+      <List>
+        <item-list v-for="intereses in lista_intereses" 
+        v-bind:key="intereses">
+          <navigation-item>{{ intereses }}</navigation-item>
+        </item-list>
+      </List>
     </section>
 
     <Card
       bgimg="svg_anim.svg"
-      title="La raíz profunda de la Creación es el orden y sentirlo nos reconecta dando forma a la conexión de todo cuanto existe."
-      subtitle="#sentirordenformaconexion"
-      text="Así, orbitando varios mundos como son la tecnología, el arte y la
-        sabiduría antigua, Sergio afianza con los años un corpus discursivo y
-        práctico que llama TODH en torno al
-        proceso mismo de la Creación y su dimensión estructural
-        holística. En este sentido su proyecto aboga por una reconexión
-        incursiva con la verdad que nos habita. Podríamos decir que su mirada
-        se centra en las experiencias antes que en los objetos o los productos,
-        defendiendo el desarrollo de la mente abstracta frente al de la mente
-        concreta."
+      v-bind:title="cita_todh2.frase"
+      v-bind:subtitle="cita_todh2.autor"
+      v-bind:text="cita_todh2.bloque"
     />
 
     <Footer />
@@ -88,16 +72,31 @@
 import Cover from "@/components/organos/Cover.vue";
 import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
 import List from "@/components/molecules/List.vue";
+import ItemList from "@/components/molecules/ItemList.vue";
+import NavigationItem from "@/components/atoms/NavigationItem.vue";
 import Card from "@/components/molecules/Card.vue";
 import Footer from "@/components/molecules/Footer.vue";
+import todh_data from "@/data";
+// console.log(slogans);
 
 export default {
   name: "Info",
+  data: () => {
+    return {
+      titulo_todh: todh_data.title,
+      slogan_web: todh_data.main_personal_areas[0].todh.slogans[0].web,
+      cita_todh: todh_data.main_personal_areas[0].todh.citas[0],
+      cita_todh2: todh_data.main_personal_areas[0].todh.citas[1],
+      lista_intereses: todh_data.intereses
+    };
+  },
   components: {
     Cover,
     BioExcerpt,
     List,
     Card,
+    NavigationItem,
+    ItemList,
     Footer
   }
 };

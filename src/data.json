@@ -1,5 +1,5 @@
 {
-  "projectname": "todh",
+  "title": "todh",
   "author": "Sergio Forés",
   "website": "t-o-d-h.com",
   "email": "sergiofores@gmail.com",
@@ -9,9 +9,25 @@
     {
       "personal": "Todo aquí ya!",
       "web": "Original 3D-printed Artwork & Modern prototyping for the web",
-      "otros": ["Thoughts become things","Sentir orden forma conexion", "El Misterio de la Creación"]
+      "otros": [
+        "Thoughts become things",
+        "Sentir orden forma conexion",
+        "El Misterio de la Creación"
+      ]
     },
     {}
+  ],
+  "citas": [
+    {
+      "frase": "Todo según el número, el peso y la medida",
+      "autor": "Pitágoras",
+      "bloque": ""
+    },
+    {
+      "frase": "Lo más importante es que lo más importante sea lo más importante",
+      "autor": "Stephen Covey",
+      "bloque": ""
+    }
   ],
   "sociallinks": [
     {
@@ -44,16 +60,6 @@
     "Inteligencia Vincular",
     "Ver lo identico en lo diferente",
     "Donde unos ven 'herramientas para...' yo veo 'instrumentos de...'"
-  ],
-  "citas": [
-    {
-      "frase": "Todo según el número, el peso y la medida",
-      "autor": "Pitágoras"
-    },
-    {
-      "frase": "Lo más importante es que lo más importante sea lo más importante",
-      "autor": "Stephen Covey"
-    }
   ],
   "insights": [
     {
@@ -105,7 +111,27 @@
   "main_personal_areas": [
     {
       "arte": {
+        "title": "Titulo",
         "areas": ["Pinturas 3D", ""],
+        "slogans": [
+          {
+            "personal": "El misterio de la Creación",
+            "web": "Original 3D-printed Artwork",
+            "otros": []
+          }
+        ],
+        "citas": [
+          {
+            "frase": "",
+            "autor": "",
+            "bloque": ""
+          },
+          {
+            "frase": "",
+            "autor": "",
+            "bloque": ""
+          }
+        ],
         "conceptos": [
           "Devolver su forma a lo intangible",
           "Todo ya funciona correctamente"
@@ -125,8 +151,28 @@
           }
         ]
       },
-      "diseño": {
+      "diseno": {
+        "title": "The power of Now",
         "areas": ["Prototipado Frontend evolutivo", "Impresión3D"],
+        "slogans": [
+          {
+            "personal": "The power of Now",
+            "web": "Holistic Framework for Rapid prototyping",
+            "otros": ["Holistic Framework for Rapid prototyping"]
+          }
+        ],
+        "citas": [
+          {
+            "frase": "Thoughts become things",
+            "autor": "...and vice versa",
+            "bloque": "Una visión holística y práctica del mundo del diseño de productos digitales a través de prototipos que evolucionan. Componentes reutilizables. Haz de tu idea algo real. Orientado a pequeñas Startups con bajo presupuesto y mucha prisa."
+          },
+          {
+            "frase": "",
+            "autor": "",
+            "bloque": ""
+          }
+        ],
         "conceptos": [
           "Me interesan los procesos creativos y sintéticos de organizar la información",
           "Componentización",
@@ -150,7 +196,27 @@
         ]
       },
       "todh": {
+        "title": "TODH",
         "areas": ["Filosofía", "Conciencia", "Mística"],
+        "slogans": [
+          {
+            "personal": "Una visión basada en hechos reales",
+            "web": "Observar. Discernir. Hacer. Transmitir.",
+            "otros": []
+          }
+        ],
+        "citas": [
+          {
+            "frase": "La raíz profunda de la Creación es el orden y sentirlo nos reconecta dando forma a la conexión de todo cuanto existe.",
+            "autor": "TODH",
+            "bloque": "Así, orbitando varios mundos como son la tecnología, el arte y la sabiduría antigua, Sergio afianza con los años un corpus discursivo y práctico que llama TODH en torno al proceso mismo de la Creación y su dimensión estructural holística. En este sentido su proyecto aboga por una reconexión incursiva con la verdad que nos habita. Podríamos decir que su mirada se centra en las experiencias antes que en los objetos o los productos, defendiendo el desarrollo de la mente abstracta frente al de la mente concreta."
+          },
+          {
+            "frase": "Todo según el peso, el número y la medida.",
+            "autor": "Pitágoras",
+            "bloque": "En torno al proceso mismo de la Creación"
+          }
+        ],
         "conceptos": ["Cristalizar la percepción"],
         "tecnica": ["La Contemplación Holística", "Mapas mentales"],
         "contents": [

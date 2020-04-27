@@ -1,16 +1,17 @@
 <template>
   <div class="design">
+ 
     <Cover
-      title="The power of Now"
-      subtitle="Holistic Framework for Rapid prototyping"
+      v-bind:title="titulo_diseno"
+      v-bind:subtitle="slogan_web"
       bgimg="img10.jpg"
     />
 
     <Card
       bgimg="img4.jpg"
-      title="Thoughts become things"
-      subtitle="...and vice versa"
-      text="Una visión holística y práctica del mundo del diseño de productos digitales a través de prototipos que evolucionan. Componentes reutilizables.  Haz de tu idea algo real. Orientado a pequeñas Startups con bajo presupuesto y mucha prisa."
+      v-bind:title="cita_todh.frase"
+      v-bind:subtitle="cita_todh.autor"
+      v-bind:text="cita_todh.bloque"
     />
 
     <Features
@@ -33,9 +34,20 @@ import Card from "@/components/molecules/Card.vue";
 import Features from "@/components/molecules/Features.vue";
 import Footer from "@/components/molecules/Footer.vue";
 import Cover from "@/components/organos/Cover.vue";
+import todh_data from "@/data";
+// console.log(slogans);
 
 export default {
   name: "Design",
+  data: () => {
+    return {
+      titulo_diseno: todh_data.main_personal_areas[0].diseno.title,
+      slogan_web: todh_data.main_personal_areas[0].diseno.slogans[0].web,
+      cita_todh: todh_data.main_personal_areas[0].diseno.citas[0],
+      // cita_todh2: todh_data.main_personal_areas[0].todh.citas[1],
+      // lista_intereses: todh_data.intereses
+    };
+  },
   components: {
     Cover,
     Card,

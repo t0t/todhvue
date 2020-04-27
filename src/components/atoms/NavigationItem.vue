@@ -1,14 +1,11 @@
 <template>
-  <a :href="url">
+  <a>
     <slot></slot>
   </a>
 </template>
 
 <script>
 export default {
-  name: "navigation-link",
-  props: {
-    url: String
-  }
+  name: "navigation-item"
 };
 </script>
