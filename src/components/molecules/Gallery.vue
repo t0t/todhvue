@@ -1,25 +1,22 @@
 <template>
   <div id="gallery" class="Gallery">
-    <p>{{images[0].img_src}}</p>
-    <p>{{images[1].img_src}}</p>
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
         <img v-bind:src="require('@/assets/'+ currentImg)" />
-        <!-- require('../assets/img/covers/' + story.cover) -->
       </div>
     </transition-group>
-    <a class="prev" @click.self.prevent="prev" href="#">&#10094; Previous</a>
-    <a class="next" @click.self.prevent="next" href="#">&#10095; Next</a>
+    <a class="prev" @click.self.prevent="prev" href="#">&#10094; </a>
+    <a class="next" @click.self.prevent="next" href="#">&#10095; </a>
   </div>
 </template>
 
 <script>
 import todh_data from "@/data";
-console.log(todh_data.main_personal_areas[0].arte.gallery);
+// console.log(todh_data.main_personal_areas[0].arte.gallery);
 
 export default {
   name: "Gallery",
-  // 1. We got an array of image URLs from Pixabay.
+  // 1. Array of image URLs from JSON file
   data: () => {
     return { 
       images: todh_data.main_personal_areas[0].arte.gallery,
@@ -29,12 +26,15 @@ export default {
     };
   },
   mounted: function () {
-    this.startSlide();
-    // 3. Created startSlide function for sliding images every 4 seconds.
+    this.stopSlide();
   },
   methods: {
+    stopSlide: function () {
+      return this.next;
+    },
     startSlide: function () {
-      this.timer = setInterval(this.next, 4000);
+      this.timer = setInterval(this.next, 8000);
+    // 3. Created startSlide function for sliding images every 4 seconds.
     },
     // Created next and prev functions for sliding to the previous or the next image. According to the last currentImg function it detects which image must show at that time based on the index.
     next: function() {
@@ -84,12 +84,12 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
-  width: auto;
+  top: 45%;
+  // width: $h4;
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: $h4;
   transition: 0.7s ease;
   border-radius: 0 4px 4px 0;
   text-decoration: none;
