@@ -1,28 +1,35 @@
 <template>
-  <div class="artwork">
+  <section class="artwork">
     <Cover
-      title="Consciousness come down"
-      subtitle="to the way things vibrate"
-      bgimg="img11.jpg"
+      v-bind:title="titulo_arte"
+      v-bind:subtitle="slogan_arte"
+      bgimg="bg1.jpg"
     />
 
     <Gallery />
 
-    <BioExcerpt
-      texto1="Incursión a la Creación misma"
-      texto2="Así, orbitando varios mundos como son la tecnología, el arte y la
+    <article>
+      <h3>Incursión en la Creación misma</h3>
+      <p>
+        Así, orbitando varios mundos como son la tecnología, el arte y la
         sabiduría antigua, Sergio afianza con los años un corpus discursivo y
-        práctico que llama TODH en torno al
-        proceso mismo de la Creación y su dimensión estructural
-        holística. En este sentido su proyecto aboga por una reconexión
-        incursiva con la verdad que nos habita. Podríamos decir que su mirada
-        se centra en las experiencias antes que en los objetos o los productos,
-        defendiendo el desarrollo de la mente abstracta frente al de la mente
-        concreta."
+        práctico que llama TODH en torno al proceso mismo de la Creación y su
+        dimensión estructural holística. En este sentido su proyecto aboga por
+        una reconexión incursiva con la verdad que nos habita. Podríamos decir
+        que su mirada se centra en las experiencias antes que en los objetos o
+        los productos, defendiendo el desarrollo de la mente abstracta frente al
+        de la mente concreta.
+      </p>
+    </article>
+
+    <BioExcerpt
+      v-bind:header="bio.author"
+      v-bind:txt="bio.bio"
+      v-bind:imagen="require('@/assets/' + bio.avatar)"
     />
 
     <Features
-      title=":)"
+      title=""
       feature1="Materiales"
       feature1b="PLA, Epoxi&Damar resins, Wax, Sand..."
       feature2="Idea"
@@ -31,7 +38,7 @@
       feature3b="Sin fin"
     />
     <Footer />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -41,15 +48,24 @@ import Cover from "@/components/organos/Cover.vue";
 import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
 import Features from "@/components/molecules/Features.vue";
 import Footer from "@/components/molecules/Footer.vue";
+import todh_data from "@/data";
+// console.log(slogans);
 
 export default {
   name: "Artwork",
+  data: () => {
+    return {
+      titulo_arte: todh_data.main_personal_areas[0].arte.title,
+      slogan_arte: todh_data.main_personal_areas[0].arte.slogans[0].web,
+      bio: todh_data,
+    };
+  },
   components: {
     Cover,
     Gallery,
     BioExcerpt,
     Features,
-    Footer
-  }
+    Footer,
+  },
 };
 </script>

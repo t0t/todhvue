@@ -1,5 +1,5 @@
 <template>
-  <div class="info">
+  <section class="info">
     <Cover
       v-bind:title="titulo_todh"
       v-bind:subtitle="slogan_web"
@@ -13,16 +13,11 @@
       v-bind:text="cita_todh.bloque"
     />
 
-    
-    <BioExcerpt
-      texto1="Una visión basada en hechos reales"
-      texto2="Desde la tecnología, el arte y la
-        sabiduría antigua, Sergio afianza con los años un corpus discursivo y
+    <article>
+      <h3>Una visión basada en hechos reales</h3>
+      <h5>Desde la tecnología, el arte y la sabiduría antigua, Sergio afianza con los años un corpus discursivo y
         práctico en torno al proceso mismo de la Creación y su dimensión estructural
-        holística."
-    />
-
-    <section class="content">
+        holística.</h5>
       <p>
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
@@ -54,7 +49,8 @@
           <navigation-item>{{ intereses }}</navigation-item>
         </item-list>
       </List>
-    </section>
+
+    </article>
 
     <Card
       bgimg="svg_anim.svg"
@@ -64,13 +60,13 @@
     />
 
     <Footer />
-  </div>
+  </section>
 </template>
 
 <script>
 // @ is an alias to /src
 import Cover from "@/components/organos/Cover.vue";
-import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
+// import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
 import List from "@/components/molecules/List.vue";
 import ItemList from "@/components/molecules/ItemList.vue";
 import NavigationItem from "@/components/atoms/NavigationItem.vue";
@@ -92,7 +88,7 @@ export default {
   },
   components: {
     Cover,
-    BioExcerpt,
+    // BioExcerpt,
     List,
     Card,
     NavigationItem,

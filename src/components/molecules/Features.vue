@@ -69,7 +69,7 @@ export default {
       @include media(s2) {
         flex-grow: 1;
         max-width: $h7;
-        background-color: $tertiary;
+        // background-color: $tertiary;
       }
       @include media(s4) {
         padding: $h3;

@@ -31,6 +31,7 @@ export default {
 .Cover {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -39,10 +40,9 @@ export default {
   background-position: top;
   background-color: $primary;
   height: 50vh;
-  color: #00dcff;
-  font-weight: normal;
+  color: $black;
   @include media(s2) {
-    height: 100vh;
+    min-height: auto;
   }
 }
 

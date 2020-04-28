@@ -59,6 +59,7 @@ html {
 }
 body {
   // line-height: $h2;
+  font-family: $primary_font;
 }
 
 h3,
@@ -81,16 +82,11 @@ h1 {
     font-size: $h3;
   }
   @include media(s2) {
+    font-family: $secondary_font;
     font-size: $h4;
   }
-  @include media(s4) {
-    font-size: $h5;
-  }
-  @include media(s5) {
-    font-size: $h6;
-  }
   @include media(s6) {
-    font-size: $h7;
+    font-size: $h6;
   }
 }
 h2 {
@@ -114,14 +110,16 @@ h2 {
     line-height: $h4;
   }
   @include media(s4) {
-    font-size: $h4;
+    // font-size: $h4;
     line-height: $h4;
+    font-weight: bold;
+    // color: blue;
   }
 }
 h3 {
   font-size: $h1;
   padding-bottom: $h1;
-  font-weight: bold;
+  font-weight: 700;
   padding-left: $h2;
   padding-right: $h2;
   @include media(s1) {
@@ -129,22 +127,27 @@ h3 {
     line-height: $h3;
   }
   @include media(s2) {
-    font-size: $h2;
-    font-weight: inherit;
-    // margin-left: $h4;
+    font-size: $h3;
+    font-weight: 300;
+    text-align: left;
+    margin-left: $h4;
   }
   @include media(s3) {
-    font-size: $h3;
+    font-weight: 400;
     padding-bottom: $h3;
   }
- 
   @include media(s4) {
-    margin-left: 0;
-    text-align: center;
-  } 
+    margin-left: $h5;
+    text-align: left;
+  }
   @include media(s5) {
+    margin-left: 0;
+    font-weight: 700;
+    text-align: center;
+    // background-color: red;
+  }
+  @include media(s6) {
     font-size: $h4;
-    font-weight: inherit;
   }
 }
 h4 {
@@ -171,20 +174,27 @@ h4 {
 h5,
 h6 {
   font-size: $h1;
-  padding-bottom: $h1;
-  font-weight: bold;
+  font-weight: 700;
+  @include media(s0) {
+    padding-bottom: $h1;
+  }
+  @include media(s2) {
+    line-height: $h2;
+  }
+  @include media(s3) {
+  }
   @include media(s4) {
-    font-weight: inherit;
-    font-size: $h3;
+  }
+  @include media(s5) {
   }
 }
 p {
-  font-size: $h1;
+  font-size: $h0;
   padding-bottom: $h2;
   text-align: left;
-  @include media(s0) {
-    font-size: $h0;
-  }
+  padding-left: $h0;
+  padding-right: $h0;
+  @include media(s0) {}
   @include media(s1) {
     padding-left: $h3;
     padding-right: $h3;
@@ -196,8 +206,8 @@ p {
     padding-right: $h4;
   }
   @include media(s3) {
-    font-size: $h2;
-    line-height: $h3;
+    font-size: $h1;
+    line-height: $h2;
     max-width: $s4;
     margin-left: $h5;
   }
@@ -206,6 +216,14 @@ p {
   }
   @include media(s5) {
     padding-right: 0;
+    padding-right: 0;
+    margin: auto;
+    // text-align: center;
+  }
+  @include media(s6) {
+    font-size: $h2;
+    line-height: $h3;
+    max-width: $s5;
   }
 }
 
@@ -337,7 +355,13 @@ footer {
   background-color: #fff;
 }
 article {
-  padding: $h2 $h2 0;
+  padding-top: $h2;
+  @include media(s2) {
+    padding-top: $h4;
+  }
+  @include media(s3) {
+    padding-top: $h5;
+  }
 }
 footer {
   padding: $h2;

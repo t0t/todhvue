@@ -1,17 +1,24 @@
 <template>
-  <section class="BioExcerpt">
-    <h3>{{ texto1 }}</h3>
-    <p>{{ texto2 }}</p>
-  </section>
+  <aside class="Bio">
+    <h5 class="BioHeader">{{ header }}</h5>
+    <img class="BioAvatar" :src="imagen" />
+    <p class="BioExcerpt">{{ txt }}</p>
+  </aside>
 </template>
 
 <script>
 export default {
   name: "BioExcerpt",
   props: {
-    texto1: String,
-    texto2: String
-  }
+    header: String,
+    txt: String,
+    imagen: String,
+  },
+  // computed: {
+  //   imgurl() {
+  //     return require("@/assets/" + this.bgimg);
+  //   }
+  // }
 };
 </script>
 
@@ -19,23 +26,46 @@ export default {
 <style lang="scss">
 @import "@/styles/main.scss";
 
-.BioExcerpt {
-  padding-top: $h3;
+.Bio {
+  border: 1px solid $black;
+  padding: $h1;
+  margin-right: $h0;
+  margin-left: $h0;
+  text-align: center;
+  @include media(s1) {
+  }
   @include media(s2) {
-    padding-top: $h4;
-    padding-bottom: $h3;
+    max-width: $s2;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: $h3;
   }
   @include media(s5) {
-    padding-top: $h5;
-    padding-bottom: $h4;
+    max-width: $s3;
   }
-  p {
-    @include media(s5) {
-      max-width: $h9;
-      padding-right: 0;
-      margin: auto;
-      text-align: center;
+  &Avatar {
+    width: $h4;
+    height: $h4;
+    border-radius: $h4;
+    @include media(s2) {
+      padding: $h1;
     }
+  }
+  &Header {
+    @include media(s1) {
+      padding-bottom: $h1;
+    }
+    @include media(s2) {
+      padding-bottom: 0;
+    }
+  }
+  &Excerpt {
+    padding: $h0;
+    margin-left: 0;
   }
 }
 </style>

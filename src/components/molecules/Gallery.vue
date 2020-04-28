@@ -60,18 +60,17 @@ export default {
 
 .Gallery {
   width: 100%;
-  height: $h8;
+  height: $h9;
   padding-top: $h2;
   padding-bottom: $h2;
+  display: flex;
+  justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: opacity 2s ease;
   background-color: $dark_grey;
-  display: flex;
-  justify-content: center;
-  span {
-    }
+  span {}
   figure {
     position: relative;
     display: flex;
@@ -96,7 +95,7 @@ export default {
 }
 
 img {
-  max-width: $s2;
+  max-width: $s3;
 }
 
 .fade-enter-active,
@@ -117,7 +116,7 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 45%;
   display: block;
   z-index: 2000;
   width: $h4;

@@ -4,7 +4,8 @@
   "website": "t-o-d-h.com",
   "email": "sergiofores@gmail.com",
   "proposito_principal": "Crear desde lo que Soy",
-  "": "",
+  "avatar": "avatar.jpg",
+  "bio": "Sergio afianza con los años un corpus discursivo y práctico que llama TODH en torno al proceso mismo de la Creación y su dimensión estructural holística",
   "slogans": [
     {
       "personal": "Todo aquí ya!",
@@ -111,20 +112,26 @@
   "main_personal_areas": [
     {
       "arte": {
-        "title": "Titulo",
+        "title": "Sentir la Creación",
         "areas": ["Pinturas 3D", ""],
         "gallery": [
           "img1.jpg",
           "img2.jpg",
           "img4.jpg",
           "img5.jpg",
-          "img6.jpg"
+          "img6.jpg",
+          "img7.jpg",
+          "img8.jpg",
+          "img9.jpg",
+          "img10.jpg",
+          "img11.jpg",
+          "img12.jpg"
         ],
         "slogans": [
           {
             "personal": "El misterio de la Creación",
-            "web": "Original 3D-printed Artwork",
-            "otros": []
+            "web": "Obra y proceso",
+            "otros": ["to the way things vibrate","Original 3D-printed Artwork"]
           }
         ],
         "citas": [
