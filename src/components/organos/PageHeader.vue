@@ -1,34 +1,36 @@
 <template>
   <hgroup
-    class="Cover"
+    class="PageHeader"
     :style="{ backgroundImage: `url(${imgurl})` }"
     role="banner"
   >
-    <h1 class="CoverTitle">{{ title }}</h1>
-    <h2 class="CoverSubtitle">{{ subtitle }}</h2>
+    <h1 class="PageHeaderTitle col-desk-12">{{ title }}</h1>
+    <h2 class="PageHeaderSubtitle col-desk-12">
+      {{ subtitle }}
+    </h2>
   </hgroup>
 </template>
 
 <script>
 export default {
-  name: "Cover",
+  name: "PageHeader",
   props: {
     title: String,
     subtitle: String,
-    bgimg: String
+    bgimg: String,
   },
   computed: {
     imgurl() {
       return require("@/assets/" + this.bgimg);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 @import "@/styles/main.scss";
 
-.Cover {
+.PageHeader {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -37,16 +39,15 @@ export default {
   align-content: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-color: $primary;
-  height: 50vh;
-  color: $light_grey;
+  height: $h8;
+  //   color: $light_grey;
   @include media(s2) {
-    min-height: auto;
+    // min-height: auto;
   }
 }
 
-.CoverSubtitle {
-  margin-right: 0;
-}
+.PageHeaderTitle {}
+
 </style>

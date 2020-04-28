@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="col-desk-3">
     <slot>
       <navigation-link url="#laurl"> </navigation-link>
     </slot>

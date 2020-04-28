@@ -1,15 +1,15 @@
 <template>
-  <aside class="CardContainer">
-    <div class="CardContent">
+  <aside class="Card">
+    <div class="CardContent grid">
       <aside
-        class="CardImage"
+        class="CardImage col-desk-3 col-tab-2"
         :style="{ backgroundImage: `url(${imgurl})` }"
       ></aside>
-      <hgroup class="CardHeader">
+      <hgroup class="CardHeader col-desk-4 col-tab-4 col-mob-3 col-mob-shift-0">
         <h4>{{ title }}</h4>
         <small>{{ subtitle }}</small>
       </hgroup>
-      <main class="CardBody">
+      <main class="CardBody col-desk-5 col-desk-shift-0 col-tab-4 col-mob-4">
         <p>{{ text }}</p>
       </main>
     </div>
@@ -34,20 +34,20 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "@/styles/main.scss";
 
-.CardContainer {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  p {
-    padding-bottom: 0;
+.Card {
+  margin: $h2 0;
+
+  h4 {
+    @include media(s2) {
+      font-size: $h2;
+      line-height: $h3;
+    }
   }
   small {
     font-style: italic;
-    padding-bottom: 0;
   }
 }
 .CardContent {
@@ -60,58 +60,24 @@ export default {
   }
 }
 .CardHeader {
-  padding-top: $h2;
-  padding-left: $h2;
-  padding-right: $h2;
-  h4 {
-    @include media(s2) {
-      margin-left: $h1;
-      padding-right: $h2;
-    }
-  }
+  padding: $h2 0;
   @include media(s5) {
-    padding-top: $h4;
-    padding-left: 0;
-    padding-right: 0;
     background-color: $light_grey;
-    small {
-      line-height: $h3;
-    }
+  }
+  small {
+    line-height: $h3;
   }
 }
 .CardBody {
-  margin-top: $h2;
-  padding-bottom: $h3;
-
+  padding-top: $h2;
   @include media(s5) {
-    padding-bottom: $h4;
-    padding-top: $h4;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  p {
-    @include media(s2) {
-      // background-color: red;
-      padding-left: 0;
-      padding-right: $h3;
-      margin: 0;
-    }
-    @include media(s5) {
-      // margin-right: $h4;
-      // margin-left: $h4;
-    }
   }
 }
 .CardImage {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: auto;
   @include media(s4) {
-    width: $h8;
-  }
-  @include media(s5) {
-    width: $h9;
   }
 }
 </style>

@@ -1,8 +1,10 @@
 <template>
-  <aside class="Bio">
-    <h5 class="BioHeader">{{ header }}</h5>
-    <img class="BioAvatar" :src="imagen" />
-    <p class="BioExcerpt">{{ txt }}</p>
+  <aside class="Bio grid">
+    <div class="col-desk-1 col-desk-shift-1 col-tab-12 col-mob-2">
+      <img class="BioAvatar" :src="imagen" />
+      </div>
+    <h5 class="BioHeader col-desk-2 col-desk-shift-1 col-tab-12 col-mob-2">{{ header }}</h5>
+    <p class="BioExcerpt col-desk-6 col-desk-shift-1 col-tab-12 col-mob-4">{{ txt }}</p>
   </aside>
 </template>
 
@@ -27,45 +29,28 @@ export default {
 @import "@/styles/main.scss";
 
 .Bio {
-  border: 1px solid $black;
-  padding: $h1;
-  margin-right: $h0;
-  margin-left: $h0;
-  text-align: center;
+  border: 1px solid $light_grey;
+  padding-top: $h2;
+
   @include media(s1) {
   }
   @include media(s2) {
-    max-width: $s2;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: $h3;
+    color: $grey;
   }
   @include media(s5) {
-    max-width: $s3;
   }
   &Avatar {
+    display: block;
     width: $h4;
     height: $h4;
-    border-radius: $h4;
+    border-radius: $h3;
+    background-color: pink;
     @include media(s2) {
-      padding: $h1;
     }
   }
   &Header {
-    @include media(s1) {
-      padding-bottom: $h1;
-    }
-    @include media(s2) {
-      padding-bottom: 0;
-    }
   }
   &Excerpt {
-    padding: $h0;
-    margin-left: 0;
   }
 }
 </style>

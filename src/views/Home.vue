@@ -35,4 +35,7 @@ export default {
 .home .Cover {
   height: 100vh;
 }
+footer {
+  margin-top: 0;
+}
 </style>

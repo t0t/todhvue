@@ -1,7 +1,11 @@
 <template>
   <div class="Gallery">
-      <figure v-for="i in [currentIndex]" :key="i">
-        <img v-bind:src="require('@/assets/' + currentImg)" />
+      <figure 
+      class="grid"
+      v-for="i in [currentIndex]" :key="i">
+        <img 
+        class="col-desk-12 col-tab-8"
+        v-bind:src="require('@/assets/' + currentImg)" />
         <!-- <figcaption>
           <span class="title">Title</span>
           <span class="description">Description</span>
@@ -63,6 +67,7 @@ export default {
   height: $h9;
   padding-top: $h2;
   padding-bottom: $h2;
+  margin-bottom: $h2;
   display: flex;
   justify-content: center;
   text-align: center;

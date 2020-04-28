@@ -1,16 +1,20 @@
 <template>
   <section class="artwork">
-    <Cover
+
+    <PageHeader
       v-bind:title="titulo_arte"
       v-bind:subtitle="slogan_arte"
-      bgimg="bg1.jpg"
+      bgimg="img9.jpg"
     />
 
     <Gallery />
 
-    <article>
-      <h3>Incursión en la Creación misma</h3>
-      <p>
+    <article class="grid">
+      <h3 class="col-desk-10 col-desk-shift-1 col-tab-8 col-mob-4">
+        Incursión en la Creación misma
+        </h3>
+      <p 
+      class="col-desk-10 col-desk-shift-1 col-tab-7 col-mob-4">
         Así, orbitando varios mundos como son la tecnología, el arte y la
         sabiduría antigua, Sergio afianza con los años un corpus discursivo y
         práctico que llama TODH en torno al proceso mismo de la Creación y su
@@ -44,7 +48,7 @@
 <script>
 /* eslint-disable */
 import Gallery from "@/components/molecules/Gallery.vue";
-import Cover from "@/components/organos/Cover.vue";
+import PageHeader from "@/components/organos/PageHeader.vue";
 import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
 import Features from "@/components/molecules/Features.vue";
 import Footer from "@/components/molecules/Footer.vue";
@@ -61,7 +65,7 @@ export default {
     };
   },
   components: {
-    Cover,
+    PageHeader,
     Gallery,
     BioExcerpt,
     Features,

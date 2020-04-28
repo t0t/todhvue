@@ -1,0 +1,377 @@
+// ****************************************
+// BASE RESPONSIVE
+// ****************************************
+
+// Breakpoints
+$s1: 300px;
+$s2: 540px;
+$s3: 800px;
+$s4: 970px;
+$s5: 1240px;
+$s6: 2300px;
+
+/* Uso:
+@include media( s + scaling factor ) {
+  property: value;
+}
+*/
+@mixin media($media) {
+  @if $media == s0 {
+    @media (max-width: $s1) {
+      @content;
+    }
+  } @else if $media == s1 {
+    @media (min-width: $s1) {
+      @content;
+    }
+  } @else if $media == s2 {
+    @media (min-width: $s2) {
+      @content;
+    }
+  } @else if $media == s3 {
+    @media (min-width: $s3) {
+      @content;
+    }
+  } @else if $media == s4 {
+    @media (min-width: $s4) {
+      @content;
+    }
+  } @else if $media == s5 {
+    @media (min-width: $s5) {
+      @content;
+    }
+  } @else if $media == s6 {
+    @media (min-width: $s6) {
+      @content;
+    }
+  }
+}
+
+// ****************************************
+// BASE
+// ****************************************
+
+html {
+  font-size: $base_font_size;
+}
+body {
+  font-family: $primary_font;
+}
+
+h3,
+h4,
+p,
+dl,
+li,
+strong,
+blockquote,
+address {
+  line-height: $base_line_height;
+}
+h1 {
+  padding-bottom: $h3;
+
+  font-weight: bold;
+  margin: $h2;
+  @include media(s0) {
+    font-size: $h2;
+  }
+  @include media(s1) {
+    font-size: $h3;
+  }
+  @include media(s2) {
+    font-family: $secondary_font;
+    font-size: $h4;
+  }
+  @include media(s6) {
+    font-size: $h6;
+  }
+}
+h2 {
+  padding-bottom: $h2;
+  @include media(s0) {
+    max-width: $h6;
+    font-size: $h2;
+    line-height: $h2;
+  }
+  @include media(s1) {
+    max-width: $h7;
+    font-size: $h2;
+    line-height: $h3;
+  }
+  @include media(s2) {
+    max-width: $h8;
+  }
+  @include media(s3) {
+    max-width: $h9;
+    font-size: $h3;
+    line-height: $h4;
+  }
+  @include media(s4) {
+    // font-size: $h4;
+    line-height: $h4;
+    font-weight: bold;
+    // color: blue;
+  }
+}
+
+h3 {
+  font-size: $h1;
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: $h1;
+
+  @include media(s1) {
+    font-size: $h2;
+  }
+  @include media(s2) {
+    line-height: $h4;
+    font-size: $h3;
+    font-weight: 300;
+  }
+  @include media(s3) {
+    font-weight: 400;
+  }
+  @include media(s4) {
+    // background-color: red;
+  }
+  @include media(s5) {
+    font-weight: 700;
+  }
+  @include media(s6) {
+    font-size: $h4;
+  }
+}
+h4 {
+  // padding-bottom: $h3;
+  font-size: $h1;
+  font-style: italic;
+  @include media(s1) {
+    font-size: $h2;
+    line-height: $h3;
+  }
+  @include media(s2) {
+
+  }
+  @include media(s3) {
+    line-height: $h4;
+    font-size: $h3;
+    // max-width: $s3;
+  }
+  @include media(s4) {
+    // max-width: $s4;
+  }
+}
+
+h5,
+h6 {
+  font-size: $h1;
+  font-weight: 700;
+  padding-bottom: $h2;
+
+  @include media(s0) {
+  }
+  @include media(s2) {
+    line-height: $h2;
+  }
+  @include media(s3) {
+  }
+  @include media(s4) {
+  }
+  @include media(s5) {
+  }
+}
+p {
+  font-size: $h0;
+  text-align: left;
+  padding-bottom: $h3;
+  @include media(s0) {}
+  @include media(s1) {
+    font-size: $h1;
+    line-height: $h2;
+  }
+  @include media(s2) {
+  }
+  @include media(s3) {
+    font-size: $h1;
+    line-height: $h2;
+  }
+  @include media(s4) {
+  }
+  @include media(s5) {
+    // text-align: center;
+  }
+  @include media(s6) {
+    font-size: $h2;
+    line-height: $h3;
+  }
+}
+
+nav {
+  letter-spacing: 1px;
+  a {
+    text-decoration: none;
+  }
+}
+small {
+  display: block;
+  font-size: $h2;
+  // padding-bottom: $h2;
+  line-height: $h1;
+  @include media(s0) {
+    font-size: $h0;
+  }
+  @include media(s1) {
+    font-size: $h1;
+    line-height: $h2;
+  }
+  @include media(s2) {
+
+  }
+  @include media(s5) {
+    font-size: $h2;
+    line-height: $h2;
+  }
+}
+// Lists
+ul {
+  // width: $h8;
+  padding-bottom: $h2;
+  @include media(s1) {
+  }
+  @include media(s2) {
+    // padding-left: $h3;
+  }
+  @include media(s3) {
+    // padding-left: $h4;
+  }
+  @include media(s5) {
+    // margin-right: $h4;
+  }
+}
+li {
+  font-size: $h0;
+  line-height: $h1;
+  @include media(s1) {
+    font-size: $h1;
+    line-height: $h2;
+  }
+  @include media(s3) {
+    font-size: $h2;
+    line-height: $h3;
+  }
+}
+dl {
+  line-height: $h2;
+  @include media(s2) {
+    font-size: $h0;
+    line-height: $h1;
+  }
+  @include media(s3) {
+    font-size: $h1;
+    line-height: $h2;
+  }
+  @include media(s4) {
+    font-size: $h2;
+    line-height: $h3;
+  }
+}
+dt {
+  font-weight: bold;
+}
+
+a {
+  // text-decoration: none;
+  color: $secondary;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  color: $dark_grey;
+}
+
+figure {
+  // display: block;
+  // font-size: $h1;
+  // padding-top: $h2;
+  // line-height: $h1;
+  // background-color: $dark_grey;
+  // @include media(s0) {
+  //   font-size: $h0;
+  // }
+  // @include media(s1) {
+  //   font-size: $h1;
+  //   line-height: $h2;
+  // }
+  // @include media(s2) {
+  //   margin-left: $h4;
+  //   padding-right: $h4;
+  // }
+  // @include media(s5) {
+  //   font-size: $h2;
+  //   line-height: $h2;
+  // }
+}
+
+// ****************************************
+// LAYOUT | MARGINS... SPACES
+// ****************************************
+.content {
+  @include media(s5) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+section {
+  background-color: #fff;
+  // margin-bottom: $h2;
+}
+footer {
+  margin-top: $h2;
+}
+article {
+  margin-bottom: $h2;
+  @include media(s2) {
+    // padding-top: $h4;
+  }
+  @include media(s3) {
+    // padding-top: $h5;
+  }
+}
+footer {
+  padding: $h2 0;
+}
+
+// .golden-box {
+//   height: 100px;
+//   width: 100px * $phi;
+//   // background-color: red;
+// }
+
+// ****************************************
+// ANIMATIONS
+// ****************************************
+
+@keyframes menu {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// ****************************************
+// DEBUGING
+// ****************************************
+
+// body * {
+//   border: 1px solid grey;
+// }

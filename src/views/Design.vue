@@ -1,7 +1,7 @@
 <template>
   <div class="design">
- 
-    <Cover
+
+    <PageHeader
       v-bind:title="titulo_diseno"
       v-bind:subtitle="slogan_web"
       bgimg="img10.jpg"
@@ -32,8 +32,9 @@
 // @ is an alias to /src
 import Card from "@/components/molecules/Card.vue";
 import Features from "@/components/molecules/Features.vue";
+import PageHeader from "@/components/organos/PageHeader.vue";
 import Footer from "@/components/molecules/Footer.vue";
-import Cover from "@/components/organos/Cover.vue";
+// import Cover from "@/components/organos/Cover.vue";
 import todh_data from "@/data";
 // console.log(slogans);
 
@@ -49,8 +50,9 @@ export default {
     };
   },
   components: {
-    Cover,
     Card,
+    // Cover,
+    PageHeader,
     Features,
     Footer
   }

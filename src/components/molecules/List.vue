@@ -1,6 +1,6 @@
 <template>
   <section>
-    <ul>
+    <ul class="grid">
       <slot></slot>
     </ul>
   </section>
@@ -15,6 +15,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-@import "@/styles/main.scss";
+// @import "@/styles/main.scss";
 
 </style>
