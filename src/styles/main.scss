@@ -1,4 +1,16 @@
+// ****************************************
+// @TODH BASE IMPORTS
+// ****************************************
+
 @import "./_meyer-reset.scss";
-@import "./_variables.scss";
-@import "./_base.scss";
+
+@import "./_variables.scss"; //vacio
+
+@import "./_typography.scss";
+@import "./_vertical_rhythm.scss";
 @import "./_grid.scss";
+
+@import "./_animations.scss";
+@import "./_colors.scss";
+
+@import "./_base.scss";

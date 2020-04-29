@@ -47,7 +47,6 @@ export default {
   }
   h3 {
     text-align: center;
-    margin-left: 0;
   }
   &Title {
     width: 100%;
@@ -60,7 +59,6 @@ export default {
     dl {
       margin-bottom: $h-2;
       @include media(s0) {
-        font-size: $h1;
       }
       @include media(s1) {
         padding: $h1;

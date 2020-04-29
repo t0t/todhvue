@@ -75,7 +75,6 @@ export default {
   overflow: hidden;
   transition: opacity 2s ease;
   background-color: $dark_grey;
-  span {}
   figure {
     position: relative;
     display: flex;

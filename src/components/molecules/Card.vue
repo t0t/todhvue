@@ -42,8 +42,6 @@ export default {
 
   h4 {
     @include media(s2) {
-      font-size: $h2;
-      line-height: $h3;
     }
   }
   small {
@@ -65,7 +63,6 @@ export default {
     background-color: $light_grey;
   }
   small {
-    line-height: $h3;
   }
 }
 .CardBody {

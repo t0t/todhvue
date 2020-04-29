@@ -41,11 +41,6 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-color: $primary;
-  height: $h8;
-  //   color: $light_grey;
-  @include media(s2) {
-    // min-height: auto;
-  }
 }
 
 .PageHeaderTitle {}

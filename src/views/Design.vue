@@ -14,6 +14,17 @@
       v-bind:text="cita_todh.bloque"
     />
 
+    <!-- <img v-bind:src="require('@/assets/' + bio.titulo_diseno)"> -->
+    <div class="grid">
+      <h3 class="col-desk-6">Commodi labore cupiditate possimus reiciendis</h3>
+      <p class="col-desk-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi labore cupiditate possimus reiciendis deserunt ullam fugiat nisi corporis necessitatibus, ipsam id consequuntur repellendus illum eum unde dolorem cumque! Dolores, magnam.</p>
+      <img  class="col-desk-6" src="../assets/img2.jpg">
+      <img  class="col-desk-6" src="../assets/img1.jpg">
+      <p class="col-desk-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi labore cupiditate possimus reiciendis deserunt ullam fugiat nisi corporis necessitatibus, ipsam id consequuntur repellendus illum eum unde dolorem cumque! Dolores, magnam.</p>
+      <img  class="col-desk-12" src="../assets/img3.jpg">
+      <small class="col-desk-3">Pie de fotografía</small>
+    </div>
+
     <Features
       title=":)"
       feature1="Tech Stack"

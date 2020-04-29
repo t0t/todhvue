@@ -28,6 +28,13 @@ export default {
       slogan_web: todh_data.slogans[0].web
     }
   },
+  methods: {
+    // LoadImage(filename) {
+        // const image = require('@/assets/' + titulo_web)
+        // const image = require('~@/assets/' + filename)
+        // return image
+    // }
+  }
 };
 </script>
 

@@ -63,8 +63,6 @@ export default {
 @import "@/styles/main.scss";
 
 .SocialLinks {
-  padding: 0;
-  margin-left: 0;
   li {
     display: flex;
     flex-wrap: wrap;
