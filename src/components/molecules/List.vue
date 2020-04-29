@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="grid">
     <ul class="grid">
       <slot></slot>
     </ul>

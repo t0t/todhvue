@@ -1,10 +1,15 @@
 <template>
   <aside class="Bio grid">
-    <div class="col-desk-1 col-desk-shift-1 col-tab-12 col-mob-2">
+    <div class="col-desk-2 col-desk-shift-1 col-tab-12 col-mob-2">
       <img class="BioAvatar" :src="imagen" />
-      </div>
-    <h6 class="BioHeader col-desk-2 col-desk-shift-1 col-tab-12 col-mob-2">{{ header }}</h6>
-    <small class="BioExcerpt col-desk-6 col-desk-shift-1 col-tab-12 col-mob-4">{{ txt }}</small>
+    </div>
+    <h6 class="BioHeader col-desk-2 col-tab-12 col-mob-2">
+      {{ header }}
+    </h6>
+    <small
+      class="BioExcerpt col-desk-5 col-desk-shift-1 col-tab-12 col-mob-4"
+      >{{ txt }}</small
+    >
   </aside>
 </template>
 
@@ -31,16 +36,21 @@ export default {
 .Bio {
   border: 1px solid $light_grey;
   color: $grey;
+  @include media(s1) {
+    @include padding-top(1);
+  }
 
   &Avatar {
     display: block;
-    width: $h4;
+    // width: $h4;
     height: $h4;
-    border-radius: $h3;
+    // border-radius: $h3;
     background-color: pink;
-    @include margin-top(1);
+    // @include margin-top(1);
   }
-  &Header {}
-  &Excerpt {}
+  &Header {
+  }
+  &Excerpt {
+  }
 }
 </style>

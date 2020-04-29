@@ -1,6 +1,5 @@
 <template>
   <section class="info">
-    
     <PageHeader
       v-bind:title="titulo_todh"
       v-bind:subtitle="slogan_web"
@@ -15,29 +14,30 @@
     />
 
     <article class="grid">
-      <h3 class="col-desk-12 col-desk-shift-1">Una visión basada en hechos reales</h3>
-      <h5 class="col-desk-8 col-desk-shift-2">Desde la tecnología, el arte y la sabiduría antigua, Sergio afianza con los años un corpus discursivo y
-        práctico en torno al proceso mismo de la Creación y su dimensión estructural
-        holística.</h5>
-      <p class="col-desk-6 col-tab-5 col-mob-4">
+      <h3 class="col-desk-12">Una visión basada en hechos reales</h3>
+      <h4 class="col-desk-4">
+        Desde la tecnología, el arte y la sabiduría antigua holística.
+      </h4>
+      <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <p class="col-desk-6 col-tab-5 col-mob-4">
+      <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <p class="col-desk-6 col-tab-5 col-mob-4">
+      <img class="col-desk-8" src="../assets/img2.jpg" />
+      <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <p class="col-desk-6 col-tab-5 col-mob-4">
+      <p class="col-desk-8 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
@@ -45,13 +45,10 @@
       </p>
 
       <List>
-        <item-list v-for="intereses in lista_intereses" 
-        v-bind:key="intereses"
-       >
+        <item-list v-for="intereses in lista_intereses" v-bind:key="intereses">
           <navigation-item>{{ intereses }}</navigation-item>
         </item-list>
       </List>
-
     </article>
 
     <Card
@@ -69,7 +66,7 @@
 // @ is an alias to /src
 // import Cover from "@/components/organos/Cover.vue";
 // import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
-import PageHeader from "@/components/organos/PageHeader.vue"
+import PageHeader from "@/components/organos/PageHeader.vue";
 import List from "@/components/molecules/List.vue";
 import ItemList from "@/components/molecules/ItemList.vue";
 import NavigationItem from "@/components/atoms/NavigationItem.vue";
@@ -86,7 +83,7 @@ export default {
       slogan_web: todh_data.main_personal_areas[0].todh.slogans[0].web,
       cita_todh: todh_data.main_personal_areas[0].todh.citas[0],
       cita_todh2: todh_data.main_personal_areas[0].todh.citas[1],
-      lista_intereses: todh_data.intereses
+      lista_intereses: todh_data.intereses,
     };
   },
   components: {
@@ -97,7 +94,7 @@ export default {
     Card,
     NavigationItem,
     ItemList,
-    Footer
-  }
+    Footer,
+  },
 };
 </script>

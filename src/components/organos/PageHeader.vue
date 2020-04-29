@@ -1,7 +1,6 @@
 <template>
   <hgroup
     class="PageHeader"
-    :style="{ backgroundImage: `url(${imgurl})` }"
     role="banner"
   >
     <h1 class="PageHeaderTitle col-desk-12">{{ title }}</h1>
@@ -19,11 +18,11 @@ export default {
     subtitle: String,
     bgimg: String,
   },
-  computed: {
-    imgurl() {
-      return require("@/assets/" + this.bgimg);
-    },
-  },
+  // computed: {
+  //   imgurl() {
+  //     return require("@/assets/" + this.bgimg);
+  //   },
+  // },
 };
 </script>
 
@@ -40,11 +39,12 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: $primary;
-    @include padding-top(4);
-    @include padding-bottom(3);
+  // background-color: $primary;
+  @include padding-top(4);
+  @include padding-bottom(3);
+  @include margin-bottom(2);
 }
 
-.PageHeaderTitle {}
-
+.PageHeaderTitle {
+}
 </style>

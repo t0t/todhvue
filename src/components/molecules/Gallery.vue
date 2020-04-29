@@ -1,16 +1,15 @@
 <template>
   <div class="Gallery">
-      <figure 
-      class="grid"
-      v-for="i in [currentIndex]" :key="i">
-        <img 
+    <figure class="grid" v-for="i in [currentIndex]" :key="i">
+      <img
         class="col-desk-12 col-tab-8"
-        v-bind:src="require('@/assets/' + currentImg)" />
-        <!-- <figcaption>
+        v-bind:src="require('@/assets/' + currentImg)"
+      />
+      <!-- <figcaption>
           <span class="title">Title</span>
           <span class="description">Description</span>
         </figcaption> -->
-      </figure>
+    </figure>
     <a class="prev" @click.self.prevent="prev" href="#">&#10094; </a>
     <a class="next" @click.self.prevent="next" href="#">&#10095; </a>
   </div>
@@ -65,16 +64,31 @@ export default {
 .Gallery {
   width: 100%;
   height: $h9;
-  padding-top: $h2;
-  padding-bottom: $h2;
-  margin-bottom: $h2;
   display: flex;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: opacity 2s ease;
-  background-color: $dark_grey;
+  @include margin-bottom(3);
+
+  @include media(s0) {
+    max-height: 25vh;
+    // background-color: green;
+  }
+  @include media(s1) {
+    max-height: 30vh;
+    // background-color: red;
+  }
+  @include media(s3) {
+    max-height: 50vh;
+    // background-color: red;
+  }
+  @include media(s3) {
+    max-height: 100vh;
+    // background-color: red;
+  }
+
   figure {
     position: relative;
     display: flex;
@@ -89,17 +103,10 @@ export default {
   //   align-items: center;
   //   color: $white;
   // }
-  .title {
-    padding-bottom: $h1;
-    color: $white;
-    // background-color: $alpha_black;
-  }
-  .description {
-  }
 }
 
 img {
-  max-width: $s3;
+  max-width: 75%;
 }
 
 .fade-enter-active,
@@ -120,17 +127,27 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 45%;
   display: block;
   z-index: 2000;
   width: $h4;
   padding: $h0;
-  color: $alpha_white;
+  color: $alpha_black;
   font-weight: bold;
   font-size: $h4;
   transition: 0.2s ease;
   text-decoration: none;
   user-select: none;
+  @include media(s0) {
+    top: 33%;
+    // background-color: green;
+  }
+  @include media(s1) {
+    top: 33%;
+    // background-color: red;
+  }
+  @include media(s3) {
+    top: 42%;
+  }
 }
 
 .next {
@@ -143,6 +160,6 @@ img {
 
 .prev:hover,
 .next:hover {
-  color: $white;
+  color: $black;
 }
 </style>

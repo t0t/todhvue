@@ -38,7 +38,7 @@ export default {
 @import "@/styles/main.scss";
 
 .Card {
-  margin: $h2 0;
+  @include margin-bottom(3);
 
   p {
     @include media(s2) {

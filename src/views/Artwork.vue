@@ -1,20 +1,24 @@
 <template>
   <section class="artwork">
-
     <PageHeader
       v-bind:title="titulo_arte"
       v-bind:subtitle="slogan_arte"
       bgimg="img9.jpg"
     />
 
-    <Gallery />
+    <div class="grid">
+      <Gallery />
+    </div>
 
     <article class="grid">
-      <h3 class="col-desk-10 col-desk-shift-1 col-tab-8 col-mob-4">
+      <h3
+        class="col-desk-10 col-desk-shift-1 col-tab-10 col-tab-shift-0 col-mob-4"
+      >
         Incursión en la Creación misma
-        </h3>
-      <p 
-      class="col-desk-10 col-desk-shift-1 col-tab-7 col-mob-4">
+      </h3>
+      <p
+        class="col-desk-10 col-desk-shift-1 col-tab-10 col-tab-shift-0 col-mob-4"
+      >
         Así, orbitando varios mundos como son la tecnología, el arte y la
         sabiduría antigua, Sergio afianza con los años un corpus discursivo y
         práctico que llama TODH en torno al proceso mismo de la Creación y su

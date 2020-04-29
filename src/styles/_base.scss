@@ -4,103 +4,27 @@
 // BASE
 // ****************************************
 
-h1 {
-  font-family: $primary;
-  font-weight: bold;
-}
 
-h2 {
-  font-family: $tertiary_font;
-}
-
-p {
-  text-align: left;
-}
-
-nav {
-  letter-spacing: 1px;
-  a {
-    text-decoration: none;
-  }
-}
 small {
   display: block;
+}
 
-  // padding-bottom: $h2;
-}
 // Lists
-ul {
-  // width: $h8;
-  padding-bottom: $h2;
-  @include media(s1) {
-  }
-  @include media(s2) {
-    // padding-left: $h3;
-  }
-  @include media(s3) {
-    // padding-left: $h4;
-  }
-  @include media(s5) {
-    // margin-right: $h4;
-  }
-}
-li {
-  @include media(s1) {
-  }
-  @include media(s3) {
-  }
-}
-dl {
-  @include media(s2) {
-  }
-  @include media(s3) {
-  }
-  @include media(s4) {
-  }
-}
-dt {
-  font-weight: bold;
-}
+
 
 a {
   // text-decoration: none;
   color: $secondary;
 }
 
-strong {
-  font-weight: bold;
-}
-
 blockquote {
   color: $dark_grey;
-}
-
-figure {
-  // display: block;
-  //
-  // padding-top: $h2;
-  //
-  // background-color: $dark_grey;
-  // @include media(s0) {
-  //
-  // }
-  // @include media(s1) {
-  //
-  //
-  // }
-  // @include media(s2) {
-  //   margin-left: $h4;
-  //   padding-right: $h4;
-  // }
-  // @include media(s5) {
-  //
-  //
-  // }
 }
 
 // ****************************************
 // LAYOUT | MARGINS... SPACES
 // ****************************************
+
 .content {
   @include media(s5) {
     display: flex;
@@ -109,28 +33,12 @@ figure {
     flex-direction: column;
   }
 }
-section {
-  background-color: #fff;
-}
-footer {
-  margin-top: $h2;
-}
-article {
-  margin-bottom: $h2;
-  @include media(s2) {
-    // padding-top: $h4;
-  }
-  @include media(s3) {
-    // padding-top: $h5;
-  }
-}
 
 // .golden-box {
 //   height: 100px;
 //   width: 100px * $phi;
 //   // background-color: red;
 // }
-
 
 
 // ****************************************

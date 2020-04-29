@@ -214,6 +214,7 @@ h3 {
   }
   @include media(s2) {
     @include type-setting(1);
+    // background-color: red;
   }
   @include media(s3) {
     @include type-setting(2);
@@ -277,21 +278,4 @@ h6 {
   @include media(s1) {
     @include type-setting(0);
   }
-  @include media(s2) {
-    @include type-setting(0);
-  }
-  @include media(s3) {
-    @include type-setting(0);
-  }
-}
-
-.PageHeader {
-  @include media(s0) {
-    padding-top: $h2;
-    padding-bottom: $h2;
-  }
-}
-
-footer {
-  padding: $h2 0;
 }
