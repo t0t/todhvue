@@ -88,13 +88,15 @@ $h-4: 0.09#{$global_scale_unit};
 $size-scales: (
   -2: $h-1,
   -1: $h0,
-    0: $h1,// 1rem
-    1: $h2,// 1.618rem
+  0: $h1,
+  // 1rem
+    1: $h2,
+  // 1.618rem
     2: $h3,
-    3: $h4,
-    4: $h5,
-    5: $h6,
-    6: $h6
+  3: $h4,
+  4: $h5,
+  5: $h6,
+  6: $h6
 );
 @function font-scale($level) {
   @return map-get($size-scales, $level);
@@ -104,13 +106,14 @@ $size-scales: (
 $line-heights: (
   -2: $base-line-height / 2.618,
   -1: $base-line-height / 1.618,
-    0: $base-line-height, // 1*1.6180= 16.180rem
+  0: $base-line-height,
+  // 1*1.6180= 16.180rem
     1: $base-line-height * 1.618,
-    2: $base-line-height * 2.618,
-    3: $base-line-height * 4.236,
-    4: $base-line-height * 4.236,
-    5: $base-line-height * 6.854,
-    6: $base-line-height * 6.854
+  2: $base-line-height * 2.618,
+  3: $base-line-height * 4.236,
+  4: $base-line-height * 4.236,
+  5: $base-line-height * 6.854,
+  6: $base-line-height * 6.854
 );
 @function line-height($level) {
   @return map-get($line-heights, $level);
@@ -122,47 +125,173 @@ $line-heights: (
   line-height: line-height($level);
 }
 
-@function size($level)  {
+@function size($level) {
   @return map-get($size-scales, $level);
 }
 // Padding top
-@mixin size-top($level: 0) {
-  margin-top: size($level);
+@mixin padding-top($level: 0) {
+  padding-top: size($level);
 }
 // Padding bottom
-@mixin size-bottom($level: 0) {
+@mixin padding-bottom($level: 0) {
+  padding-bottom: size($level);
+}
+// Margin top
+@mixin margin-top($level: 0) {
+  margin-top: size($level);
+}
+// Margin bottom
+@mixin margin-bottom($level: 0) {
   margin-bottom: size($level);
 }
 
-// The main heading
+p {
+  @include margin-bottom(1);
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(1);
+  }
+  @include media(s4) {
+    @include type-setting(2);
+  }
+}
+
+img {
+  @include margin-bottom(1);
+}
+
 h1 {
-  @include media(s0) { @include type-setting(0) }
-  @include media(s1) { @include type-setting(2) }
-  @include media(s2) { @include type-setting(3) }
-  @include media(s3) { @include type-setting(3) }
-  @include media(s4) { @include type-setting(6) }
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(2);
+  }
+  @include media(s2) {
+    @include type-setting(3);
+  }
+  @include media(s3) {
+    @include type-setting(3);
+  }
+  @include media(s4) {
+    @include type-setting(6);
+  }
 }
 
 h2 {
-    @include media(s0) { @include type-setting(0) }
-    @include media(s1) { @include type-setting(1) }
-    @include media(s3) { @include type-setting(2) }
-    @include media(s4) { @include type-setting(4) }
-    @include media(s5) { @include type-setting(5) }
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(1);
+  }
+  @include media(s3) {
+    @include type-setting(2);
+  }
+  @include media(s4) {
+    @include type-setting(4);
+  }
+  @include media(s5) {
+    @include type-setting(5);
+  }
+}
+
+h3 {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    font-weight: bold;
+    @include type-setting(1);
+  }
+  @include media(s2) {
+    @include type-setting(1);
+  }
+  @include media(s3) {
+    @include type-setting(2);
+  }
+  @include media(s4) {
+    @include type-setting(3);
+  }
+}
+
+h4,
+h5,
+h6 {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    font-weight: bold;
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(1);
+  }
+  @include media(s4) {
+    @include type-setting(2);
+  }
+}
+
+dl,
+ul {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    // font-weight: bold;
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(0);
+  }
+  @include media(s4) {
+    @include type-setting(1);
+  }
+  @include media(s5) {
+    @include type-setting(2);
+  }
+}
+small,
+h6 {
+  text-align: left;
+  @include padding-bottom(1);
+
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(0);
+  }
 }
 
 .PageHeader {
-  @include media(s0) { 
+  @include media(s0) {
     padding-top: $h2;
     padding-bottom: $h2;
   }
 }
 
-p {
-  @include size-top(-1);
-  @include size-bottom(1);
-}
 footer {
-  
   padding: $h2 0;
 }

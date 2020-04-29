@@ -53,8 +53,8 @@ export default {
     IconTwitter,
     IconGithub,
     IconFacebook,
-    IconUnsplash
-  }
+    IconUnsplash,
+  },
 };
 </script>
 
@@ -63,6 +63,7 @@ export default {
 @import "@/styles/main.scss";
 
 .SocialLinks {
+  padding-bottom: 0;
   li {
     display: flex;
     flex-wrap: wrap;

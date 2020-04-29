@@ -1,16 +1,16 @@
 <template>
   <aside class="Features">
     <h3>{{ title }}</h3>
-    <div class="FeaturesList">
-      <dl>
+    <div class="FeaturesList grid">
+      <dl col-desk-4>
         <dt>{{ feature1 }}</dt>
         <dd>{{ feature1b }}</dd>
       </dl>
-      <dl>
+      <dl col-desk-4>
         <dt>{{ feature2 }}</dt>
         <dd>{{ feature2b }}</dd>
       </dl>
-      <dl>
+      <dl col-desk-4>
         <dt>{{ feature3 }}</dt>
         <dd>{{ feature3b }}</dd>
       </dl>

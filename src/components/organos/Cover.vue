@@ -40,7 +40,7 @@ export default {
   background-position: top;
   background-color: $primary;
   height: 50vh;
-  color: $light_grey;
+  // color: $light_grey;
   @include media(s2) {
     min-height: auto;
   }

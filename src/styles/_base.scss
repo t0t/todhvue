@@ -11,20 +11,10 @@ h1 {
 
 h2 {
   font-family: $tertiary_font;
-  padding-bottom: $h2;
-  @include media(s0) {
-    max-width: $h6;
-  }
 }
 
 p {
   text-align: left;
-  padding-bottom: $h2;
-  @include media(s0) { @include type-setting(-2) }
-  @include media(s1) { @include type-setting(-1) }
-  @include media(s2) { @include type-setting(0) }
-  @include media(s3) { @include type-setting(1) }
-  @include media(s4) { @include type-setting(2); }
 }
 
 nav {

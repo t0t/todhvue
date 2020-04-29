@@ -41,6 +41,8 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-color: $primary;
+    @include padding-top(4);
+    @include padding-bottom(3);
 }
 
 .PageHeaderTitle {}

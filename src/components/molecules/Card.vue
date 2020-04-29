@@ -40,8 +40,9 @@ export default {
 .Card {
   margin: $h2 0;
 
-  h4 {
+  p {
     @include media(s2) {
+      @include type-setting(0);
     }
   }
   small {
@@ -51,18 +52,16 @@ export default {
 .CardContent {
   background-color: $light_grey;
   text-align: left;
-  @include media(s2) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+  // @include media(s2) {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: nowrap;
+  // }
 }
 .CardHeader {
-  padding: $h2 0;
+  @include padding-top(1);
   @include media(s5) {
     background-color: $light_grey;
-  }
-  small {
   }
 }
 .CardBody {
