@@ -18,26 +18,55 @@
       <h4 class="col-desk-12 col-tab-9 col-tab-shift-0">
         Desde la tecnología, el arte y la sabiduría antigua holística.
       </h4>
-      <p class="col-desk-6 col-tab-5 col-mob-4">
+      <div class="col-desk-12">
+        <img src="graficos/grafico-5.svg" />
+      </div>
+      <p class="col-desk-7 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <p class="col-desk-6 col-tab-5 col-mob-4">
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <img src="graficos/grafico-8.svg" />
+      </div>
+      <p class="col-desk-7 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <img class="col-desk-8" src="../assets/img2.jpg" />
+      <div class="col-desk-5">
+        <img src="graficos/grafico-1.svg" />
+      </div>
+      <p class="col-desk-12 col-tab-5 col-mob-4">
+        En este sentido su proyecto aboga por una reconexión incursiva con la
+        verdad que nos habita. Podríamos decir que su mirada se centra en las
+        experiencias antes que en los objetos o los productos, defendiendo el
+        desarrollo de la mente abstracta frente al de la mente concreta.
+      </p>
+      <div class="col-desk-8">
+        <img src="graficos/grafico-2.svg" />
+      </div>
       <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <p class="col-desk-8 col-tab-5 col-mob-4">
+      <p class="col-desk-7 col-tab-5 col-mob-4">
+        En este sentido su proyecto aboga por una reconexión incursiva con la
+        verdad que nos habita. Podríamos decir que su mirada se centra en las
+        experiencias antes que en los objetos o los productos, defendiendo el
+        desarrollo de la mente abstracta frente al de la mente concreta.
+      </p>
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <img src="graficos/grafico-3.svg" />
+      </div>
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <img src="graficos/grafico-4.svg" />
+      </div>
+      <p class="col-desk-7 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
@@ -52,6 +81,13 @@
           <navigation-item>{{ intereses }}</navigation-item>
         </item-list>
       </List>
+
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <img src="graficos/grafico-6.svg" />
+      </div>
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <img src="graficos/grafico-7.svg" />
+      </div>
     </article>
 
     <Card
