@@ -2,15 +2,15 @@
   <aside class="Features">
     <h3>{{ title }}</h3>
     <div class="FeaturesList grid">
-      <dl col-desk-4>
+      <dl col-desk-4 col-tab-5 col-mob-4>
         <dt>{{ feature1 }}</dt>
         <dd>{{ feature1b }}</dd>
       </dl>
-      <dl col-desk-4>
+      <dl col-desk-4 col-tab-5 col-mob-4>
         <dt>{{ feature2 }}</dt>
         <dd>{{ feature2b }}</dd>
       </dl>
-      <dl col-desk-4>
+      <dl col-desk-4 col-tab-5 col-mob-4>
         <dt>{{ feature3 }}</dt>
         <dd>{{ feature3b }}</dd>
       </dl>
@@ -38,7 +38,7 @@ export default {
 
 .Features {
   background-color: $white;
-  padding: $h2;
+  // padding: $h2;
   @include media(s1) {
     padding-bottom: $h3;
   }

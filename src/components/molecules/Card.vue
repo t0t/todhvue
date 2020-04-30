@@ -2,14 +2,14 @@
   <aside class="Card">
     <div class="CardContent grid">
       <aside
-        class="CardImage col-desk-3 col-tab-2"
+        class="CardImage col-desk-3 col-tab-2 col-mob-1"
         :style="{ backgroundImage: `url(${imgurl})` }"
       ></aside>
-      <hgroup class="CardHeader col-desk-4 col-tab-4 col-mob-3 col-mob-shift-0">
+      <hgroup class="CardHeader col-desk-4 col-tab-3 col-mob-3">
         <h4>{{ title }}</h4>
         <small>{{ subtitle }}</small>
       </hgroup>
-      <main class="CardBody col-desk-5 col-desk-shift-0 col-tab-4 col-mob-4">
+      <main class="CardBody col-desk-5 col-desk-shift-0 col-tab-5 col-mob-4">
         <p>{{ text }}</p>
       </main>
     </div>
@@ -38,7 +38,11 @@ export default {
 @import "@/styles/main.scss";
 
 .Card {
-  @include margin-bottom(3);
+  @include media(s1) {
+    // @include padding-top(3);
+    // @include padding-bottom(-1);
+    @include margin-bottom(2);
+  }
 
   p {
     @include media(s2) {

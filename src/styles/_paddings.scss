@@ -11,6 +11,12 @@ h3 {
     // background-color: blue;
   }
 }
+h4 {
+  @include media(s1) {
+    @include margin-bottom(0);
+    // background-color: blue;
+  }
+}
 ul {
   @include padding-bottom(-2);
 }
@@ -20,5 +26,5 @@ footer {
   @include padding-bottom(0);
 }
 article {
-  @include margin-bottom(3);
+  @include margin-bottom(1);
 }

@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <div class="togglemenu" 
-    v-on:click="show = !show; isActive = true"
+    v-on:click="show = !show;"
     v-bind:class="{ active : isActive }"
     >
-      <div class="open-menu" v-if="!show">|||</div>
-      <div class="close-menu" v-if="show">X</div>
+      <div class="open-menu" v-if="!show">
+        <IconMenu />
+      </div>
+      <div class="close-menu" v-if="show" v-on:click="isActive = !isActive">X</div>
     </div>
     <BrandLogo />
     <nav id="nav-container" role="navigation">
@@ -23,6 +25,7 @@
 
 <script>
 import BrandLogo from "@/components/molecules/BrandLogo.vue";
+import IconMenu from "@/components/atoms/icons/IconMenu.vue";
 
 export default {
   data: () => {
@@ -33,6 +36,7 @@ export default {
   },
   components: {
     BrandLogo,
+    IconMenu,
   },
 };
 </script>
@@ -57,7 +61,7 @@ export default {
   align-items: center;
   top: 0;
   right: 0;
-  z-index: 9;
+  z-index: 11;
   @include media(s4) {
     width: $h5;
     top: 0;
@@ -78,6 +82,7 @@ export default {
 
 #nav-container {
   ul {
+    z-index: 10; //overwrite all content
     position: fixed;
     top: 0;
     @include padding-top(3);

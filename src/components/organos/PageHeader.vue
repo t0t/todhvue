@@ -39,10 +39,26 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  // background-color: $primary;
-  @include padding-top(4);
-  @include padding-bottom(3);
-  @include margin-bottom(2);
+  @include padding-top(3);
+  @include padding-bottom(2);
+
+  @include media(s1) {
+    @include padding-top(3);
+    @include padding-bottom(2);
+    // @include margin-bottom(2);
+  }
+  @include media(s3) {
+    @include padding-top(3);
+    @include padding-bottom(2);
+    @include margin-bottom(2);
+  }
+  @include media(s4) {
+    // background-color: red;
+    @include padding-top(4);
+    @include padding-bottom(3);
+    @include margin-bottom(3);
+  }
+  
 }
 
 .PageHeaderTitle {

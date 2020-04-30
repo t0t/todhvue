@@ -15,16 +15,16 @@
 
     <article class="grid">
       <h3 class="col-desk-12">Una visión basada en hechos reales</h3>
-      <h4 class="col-desk-4">
+      <h4 class="col-desk-12 col-tab-9 col-tab-shift-0">
         Desde la tecnología, el arte y la sabiduría antigua holística.
       </h4>
-      <p class="col-desk-4 col-tab-5 col-mob-4">
+      <p class="col-desk-6 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
-      <p class="col-desk-4 col-tab-5 col-mob-4">
+      <p class="col-desk-6 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
@@ -44,6 +44,9 @@
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
 
+      <div class="col-desk-12">
+        <h5>A dotted list component:</h5>
+      </div>
       <List>
         <item-list v-for="intereses in lista_intereses" v-bind:key="intereses">
           <navigation-item>{{ intereses }}</navigation-item>
