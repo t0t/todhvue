@@ -14,23 +14,20 @@
     />
 
     <article class="grid">
-      <h3 class="col-desk-12">Una visión basada en hechos reales</h3>
+      <h3 class="col-desk-12">Sentir la creación que ya eres</h3>
       <h4 class="col-desk-12 col-tab-9 col-tab-shift-0">
-        Desde la tecnología, el arte y la sabiduría antigua holística.
+        De la mente concreta a la mente abstracta
       </h4>
       <div class="col-desk-12">
         <img src="graficos/grafico-5.svg" />
       </div>
-      <p class="col-desk-7 col-tab-5 col-mob-4">
-        En este sentido su proyecto aboga por una reconexión incursiva con la
-        verdad que nos habita. Podríamos decir que su mirada se centra en las
-        experiencias antes que en los objetos o los productos, defendiendo el
-        desarrollo de la mente abstracta frente al de la mente concreta.
+      <p class="col-desk-4 col-tab-5 col-mob-4">
+        Estos últimos años se ha ido consolidando una manera de ver la realidad.
       </p>
-      <div class="col-desk-5 col-tab-5 col-mob-4">
+      <div class="col-desk-8 col-tab-5 col-mob-4">
         <img src="graficos/grafico-8.svg" />
       </div>
-      <p class="col-desk-7 col-tab-5 col-mob-4">
+      <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
         verdad que nos habita. Podríamos decir que su mirada se centra en las
         experiencias antes que en los objetos o los productos, defendiendo el
