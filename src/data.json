@@ -20,60 +20,132 @@
   ],
   "products": [
     {
-      "id": "1",
-      "imgsrc": "grafico-1.svg", 
-      "thumb": "grafico-1.svg", 
-      "title": "Obra holistica n.0", 
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quis doloremque excepturi voluptas, saepe accusantium tenetur dicta similique harum reprehenderit non possimus sit",
-      "url": "/artwork"
-     },
-    {
-      "id": "2",
-      "imgsrc": "grafico-2.svg", 
-      "thumb": "grafico-2.svg", 
-      "title": "Obra holistica n.2", 
-      "description": "molestias ex nulla ipsum dolores perspiciatis nihil.",
-      "url": "/artwork"
-     },
-    {
-      "id": "3",
-      "imgsrc": "grafico-3.svg", 
-      "thumb": "grafico-3.svg", 
-      "title": "Obra holistica n.3", 
-      "description": "Image desc.",
-      "url": "/artwork"
-     },
+      "id": "13",
+      "imgsrc": "img11.jpg",
+      "thumb": "th-img11.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
     {
       "id": "4",
-      "imgsrc": "img3.jpg", 
-      "thumb": "img3.jpg", 
-      "title": "Obra holistica n.4", 
-      "description": "Descripción",
-      "url": "/artwork"
-     },
+      "imgsrc": "img3.jpg",
+      "thumb": "img3.jpg",
+      "title": "Obra holistica n.4",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
     {
       "id": "5",
-      "imgsrc": "img2.jpg", 
-      "thumb": "img2.jpg", 
-      "title": "Obra holistica n.5", 
-      "description": "Descripción",
+      "imgsrc": "img2.jpg",
+      "thumb": "img2.jpg",
+      "title": "Obra holistica n.5",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
       "url": "/artwork"
-     },
+    },
     {
       "id": "6",
-      "imgsrc": "img1.jpg", 
-      "thumb": "img3.jpg", 
-      "title": "Obra holistica n.6", 
-      "description": "Descripción",
-      "url": "/artwork"
-     },
+      "imgsrc": "img1.jpg",
+      "thumb": "th-img1.jpg",
+      "title": "Obra holistica n.6",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/design"
+    },
     {
       "id": "7",
-      "imgsrc": "img6.jpg", 
-      "thumb": "img4.jpg", 
-      "title": "Obra holistica n.7", 
-      "description": "Descripción",
-      "url": "/artwork"
+      "imgsrc": "img6.jpg",
+      "thumb": "th-img6.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "8",
+      "imgsrc": "img4.jpg",
+      "thumb": "th-img4.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "9",
+      "imgsrc": "img5.jpg",
+      "thumb": "th-img5.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "10",
+      "imgsrc": "img8.jpg",
+      "thumb": "th-img8.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "11",
+      "imgsrc": "img9.jpg",
+      "thumb": "th-img9.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "12",
+      "imgsrc": "img10.jpg",
+      "thumb": "th-img10.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "14",
+      "imgsrc": "img14.jpg",
+      "thumb": "th-img14.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "15",
+      "imgsrc": "img15.jpg",
+      "thumb": "th-img15.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "16",
+      "imgsrc": "img16.jpg",
+      "thumb": "th-img16.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "17",
+      "imgsrc": "img17.jpg",
+      "thumb": "th-img17.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "18",
+      "imgsrc": "img18.jpg",
+      "thumb": "th-img18.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
+    },
+    {
+      "id": "19",
+      "imgsrc": "img19.jpg",
+      "thumb": "th-img19.jpg",
+      "title": "Obra holistica n.7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ullam ducimus incidunt officiis, ut, magni natus esse delectus expedita vel quia eum nesciunt. Accusamus nesciunt voluptatum quasi quis libero vel?",
+      "url": "/info"
     }
   ],
   "citas": [
@@ -189,7 +261,10 @@
           {
             "personal": "El misterio de la Creación",
             "web": "Obra y proceso",
-            "otros": ["to the way things vibrate","Original 3D-printed Artwork"]
+            "otros": [
+              "to the way things vibrate",
+              "Original 3D-printed Artwork"
+            ]
           }
         ],
         "citas": [

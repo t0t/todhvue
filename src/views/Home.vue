@@ -3,11 +3,10 @@
     <Cover
       v-bind:title="titulo_web"
       v-bind:subtitle="slogan_web"
-      bgimg="img3.jpg"
+      bgimg="detalle6.jpg"
     />
 
     <section class="ProductGallery grid">
-      <h3 class="col-desk-12">Showroom lab</h3>
       <div class="col-desk-7 col-tab-5 col-mob-4">
         <div class="ProductCard">
           <div class="ProductImage">
@@ -128,7 +127,7 @@ export default {
 }
 .ProductCaption {
   padding: $h2;
-  background-color: $secondary;
+  // background-color: $secondary;
   h6 {
     @include padding-bottom(-1)
   }
