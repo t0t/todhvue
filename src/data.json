@@ -9,7 +9,7 @@
   "slogans": [
     {
       "personal": "Todo aquí ya!",
-      "web": "Original 3D-printed Artwork & Modern prototyping for the web",
+      "web": "Artworks, Cosmovision & Fast prototyping",
       "otros": [
         "Thoughts become things",
         "Sentir orden forma conexion",
@@ -24,16 +24,16 @@
       "imgsrc": "grafico-1.svg", 
       "thumb": "grafico-1.svg", 
       "title": "Obra holistica n.0", 
-      "description": "Impresión 3D",
-      "url": "xervrtbgrtx"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quis doloremque excepturi voluptas, saepe accusantium tenetur dicta similique harum reprehenderit non possimus sit",
+      "url": "/artwork"
      },
     {
       "id": "2",
       "imgsrc": "grafico-2.svg", 
       "thumb": "grafico-2.svg", 
       "title": "Obra holistica n.2", 
-      "description": "Descripción",
-      "url": "xervrtbgrtx"
+      "description": "molestias ex nulla ipsum dolores perspiciatis nihil.",
+      "url": "/artwork"
      },
     {
       "id": "3",
@@ -41,7 +41,7 @@
       "thumb": "grafico-3.svg", 
       "title": "Obra holistica n.3", 
       "description": "Image desc.",
-      "url": "xgghthyjytjyx"
+      "url": "/artwork"
      },
     {
       "id": "4",
@@ -49,7 +49,7 @@
       "thumb": "img3.jpg", 
       "title": "Obra holistica n.4", 
       "description": "Descripción",
-      "url": "srgs"
+      "url": "/artwork"
      },
     {
       "id": "5",
@@ -57,7 +57,7 @@
       "thumb": "img2.jpg", 
       "title": "Obra holistica n.5", 
       "description": "Descripción",
-      "url": "xgghthyjytjyx"
+      "url": "/artwork"
      },
     {
       "id": "6",
@@ -65,7 +65,7 @@
       "thumb": "img3.jpg", 
       "title": "Obra holistica n.6", 
       "description": "Descripción",
-      "url": "srgs"
+      "url": "/artwork"
      },
     {
       "id": "7",
@@ -73,7 +73,7 @@
       "thumb": "img4.jpg", 
       "title": "Obra holistica n.7", 
       "description": "Descripción",
-      "url": "xx"
+      "url": "/artwork"
     }
   ],
   "citas": [

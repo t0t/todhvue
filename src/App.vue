@@ -1,18 +1,27 @@
 <template>
   <div id="app">
-    <div class="togglemenu" 
-    v-on:click="show = !show;"
-    v-bind:class="{ active : isActive }"
+    <div
+      class="togglemenu"
+      v-on:click="show = !show"
+      v-bind:class="{ active: isActive }"
     >
       <div class="open-menu" v-if="!show">
         <IconMenu />
       </div>
-      <div class="close-menu" v-if="show" v-on:click="isActive = !isActive">X</div>
+      <div class="close-menu" v-if="show" v-on:click="isActive = !isActive">
+        X
+      </div>
     </div>
     <BrandLogo />
     <nav id="nav-container" role="navigation">
       <transition name="fade">
-        <ul v-if="show" v-on:click="show = !show; isActive = false">
+        <ul
+          v-if="show"
+          v-on:click="
+            show = !show;
+            isActive = false;
+          "
+        >
           <router-link to="/artwork">Artwork</router-link>
           <router-link to="/design">Prototyping</router-link>
           <router-link to="/info">TODH</router-link>
@@ -31,7 +40,7 @@ export default {
   data: () => {
     return {
       show: false,
-      isActive: false
+      isActive: false,
     };
   },
   components: {
@@ -75,8 +84,13 @@ export default {
   .close-menu {
     color: $white;
   }
-  .close-menu, .open-menu {
+  .close-menu,
+  .open-menu {
     padding: $h1;
+    rect {
+      fill: $white;
+      stroke: $black;
+    }
   }
 }
 
@@ -103,7 +117,7 @@ export default {
     padding: $h0;
     font-size: $h2;
     &:hover {
-    background-color: $alpha_black;
+      background-color: $alpha_black;
     }
     @include margin-top(1);
     @include media(s2) {

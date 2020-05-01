@@ -1,7 +1,20 @@
 // Lists
 .ListButllets {
-    list-style: inside;
-    li {
-        text-align: left;
+  list-style: inside;
+  li {
+    text-align: left;
+  }
+}
+.ButtonDefault {
+  background-color: inherit;
+  border: none;
+  a {
+    padding: $h0 $h1;
+    color: $white;
+    text-decoration: none;
+    background-color: $alpha_black;
+    &:hover {
+      background-color: $primary;
     }
+  }
 }

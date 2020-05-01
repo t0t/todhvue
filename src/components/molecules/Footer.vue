@@ -1,18 +1,35 @@
 <template>
   <footer class="Footer">
-    <SocialLinks />
+    <div class="grid">
+      
+        <BioExcerpt
+          v-bind:header="bio.author"
+          v-bind:txt="bio.bio"
+          v-bind:imagen="require('@/assets/' + bio.avatar)"
+        />
+
+    </div>
   </footer>
 </template>
 
 <script>
-import SocialLinks from "@/components/molecules/SocialLinks.vue";
+import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
+
+import todh_data from "@/data";
+// console.log(todh_data);
+
 export default {
   name: "Footer",
   props: {
-    msg: String
+    msg: String,
+  },
+  data: () => {
+    return {
+      bio: todh_data
+    }
   },
   components: {
-    SocialLinks
+    BioExcerpt
   }
 };
 </script>
@@ -23,14 +40,14 @@ export default {
 
 .Footer {
   z-index: -1;
-  // position: sticky;
-  // bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: $light_grey;
-  // margin-top: $h-2;
-  // height: 200px;
+  @include padding-top(4);
+  @include padding-bottom(4);
   // background-color: red;
 }
 </style>

@@ -3,30 +3,28 @@
     <Cover
       v-bind:title="titulo_web"
       v-bind:subtitle="slogan_web"
-      bgimg="grafico-2.svg"
+      bgimg="img3.jpg"
     />
 
     <section class="ProductGallery grid">
       <h3 class="col-desk-12">Showroom lab</h3>
-      <div class="col-desk-6 col-tab-7 col-mob-4">
+      <div class="col-desk-7 col-tab-5 col-mob-4">
         <div class="ProductCard">
-          <figure class="ProductImage">
+          <div class="ProductImage">
             <img :src="'/img/' + currentProduct" :alt="currentDescription" />
-            <figcaption class="ProductCaption">{{ currentDescription }}</figcaption>
-          </figure>
+          </div>
         </div>
       </div>
 
-      <div class="actions">
-        <span @click="prevProduct" class="prev">
-          &#10094;
-        </span>
-        <span @click="nextProduct" class="next">
-          &#10095;
-        </span>
-      </div>
-
-      <div class="col-desk-5 col-tab-3 col-mob-4">
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <div class="actions">
+          <span @click="prevProduct" class="prev">
+            &#10094;
+          </span>
+          <span @click="nextProduct" class="next">
+            &#10095;
+          </span>
+        </div>
         <div class="thumbnails">
           <div
             v-for="(product, index) in products"
@@ -37,9 +35,16 @@
             <img :src="'/img/' + product.thumb" />
           </div>
         </div>
+        <div class="ProductCaption">
+          <h6>{{ currentTitle }}</h6>
+          <small>{{ currentDescription }}</small>
+          <button class="ButtonDefault">
+            <router-link :to="currentLink">Más info</router-link>
+          </button>
+        </div>
       </div>
-    </section>
 
+    </section>
     <Footer />
   </div>
 </template>
@@ -47,8 +52,9 @@
 <script>
 import Cover from "@/components/organos/Cover.vue";
 import Footer from "@/components/molecules/Footer.vue";
+
 import todh_data from "@/data";
-console.log(todh_data);
+// console.log(todh_data);
 
 export default {
   name: "Home",
@@ -68,6 +74,12 @@ export default {
   },
   computed: {
     currentDescription() {
+      return this.products[this.activeProduct].description;
+    },
+    currentLink() {
+      return this.products[this.activeProduct].url;
+    },
+    currentTitle() {
       return this.products[this.activeProduct].title;
     },
     currentProduct() {
@@ -108,59 +120,61 @@ export default {
 <style lang="scss">
 @import "@/styles/main.scss";
 
-.home .Cover {
-  // height: 30vh;
-  color: $white;
-  @include margin-bottom(2);
-}
-
 .ProductGallery {
   @include margin-bottom(2);
 }
 .ProductImage {
   background-color: $alpha_white;
-  position: relative;
 }
 .ProductCaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: $alpha_white;
+  padding: $h2;
+  background-color: $secondary;
+  h6 {
+    @include padding-bottom(-1)
+  }
 }
+
 .thumbnails {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  padding: $h0;
-  border: 1px solid $light_grey;
+  padding: 0;
   img {
     max-width: 100%;
-    height: auto;
+    margin-bottom: 0;
   }
 }
 .actions {
-  position: relative;
-  // background-color: red;
-  // padding: $h2;
-  .next, .prev {
-    position: absolute;
-    top: -#{$h3};
+  display: flex;
+  justify-content: flex-end;
+
+  .next,
+  .prev {
+    display: block;
+    width: 50px;
+    height: 50px;
     @include type-setting(1);
+    &:hover {
+      cursor: pointer;
+      color: $secondary;
+    }
   }
   .next {
-    right: $h1;
+    right: 0;
   }
   .prev {
-    right: $h3;
+    left: 0;
   }
 }
 .thumbnail-image {
   width: 50px;
-  // height: 50px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .thumbnail-image.active {
-  opacity: 0.5;
+  background-color: $secondary;
 }
 
 footer {

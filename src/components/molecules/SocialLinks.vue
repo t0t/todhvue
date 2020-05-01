@@ -63,7 +63,6 @@ export default {
 @import "@/styles/main.scss";
 
 .SocialLinks {
-  padding-bottom: 0;
   li {
     display: flex;
     flex-wrap: wrap;
@@ -72,6 +71,7 @@ export default {
   a {
     @include media(s1) {
       width: $h3;
+      padding-bottom: $h1;
     }
     svg {
       width: $h2;

@@ -29,6 +29,8 @@ export default {
 @import "@/styles/main.scss";
 
 .Cover {
+  // height: 30vh;
+  color: $white;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -39,10 +41,17 @@ export default {
   background-repeat: no-repeat;
   background-position: top;
   background-color: $primary;
-  height: 50vh;
-  // color: $light_grey;
+  height: 25vh;
+
+  @include margin-bottom(2);
+  @include media(s1) {
+    height: 30vh;
+  }
   @include media(s2) {
-    min-height: auto;
+    height: 35vh;
+  }
+  @include media(s3) {
+    height: 50vh;
   }
 }
 

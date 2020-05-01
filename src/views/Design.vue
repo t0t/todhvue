@@ -49,7 +49,6 @@
       feature3="Static site deployed in seconds"
       feature3b="Testing on real devices"
     />
-
     <Footer />
   </div>
 </template>
