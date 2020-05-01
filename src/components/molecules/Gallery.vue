@@ -5,10 +5,6 @@
         class="col-desk-12 col-tab-8"
         v-bind:src="require('@/assets/' + currentImg)"
       />
-      <!-- <figcaption>
-          <span class="title">Title</span>
-          <span class="description">Description</span>
-        </figcaption> -->
     </figure>
     <a class="prev" @click.self.prevent="prev" href="#">&#10094; </a>
     <a class="next" @click.self.prevent="next" href="#">&#10095; </a>
@@ -97,13 +93,6 @@ export default {
     justify-content: center;
     align-items: center;
   }
-  // figcaption {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   // flex-direction: column;
-  //   align-items: center;
-  //   color: $white;
-  // }
 }
 
 img {
