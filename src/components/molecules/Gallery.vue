@@ -24,6 +24,7 @@ export default {
   // 1. Array of image URLs from JSON file
   data: () => {
     return {
+      // images: todh_data.products[0],
       images: todh_data.main_personal_areas[0].arte.gallery,
       timer: null,
       currentIndex: 0,

@@ -20,43 +20,57 @@
   ],
   "products": [
     {
+      "id": "1",
       "imgsrc": "grafico-1.svg", 
+      "thumb": "grafico-1.svg", 
       "title": "Obra holistica nº1", 
       "description": "Descripción",
       "url": "xervrtbgrtx"
      },
     {
+      "id": "1",
       "imgsrc": "grafico-2.svg", 
+      "thumb": "grafico-2.svg", 
       "title": "Obra holistica nº1", 
       "description": "Descripción",
       "url": "xervrtbgrtx"
      },
     {
+      "id": "1",
       "imgsrc": "grafico-3.svg", 
+      "thumb": "grafico-3.svg", 
       "title": "dd", 
       "description": "Descripción",
       "url": "xgghthyjytjyx"
      },
     {
+      "id": "1",
       "imgsrc": "img3.jpg", 
+      "thumb": "img3.jpg", 
       "title": "dd", 
       "description": "Descripción",
       "url": "srgs"
      },
     {
+      "id": "1",
       "imgsrc": "img2.jpg", 
+      "thumb": "img2.jpg", 
       "title": "dd", 
       "description": "Descripción",
       "url": "xgghthyjytjyx"
      },
     {
+      "id": "1",
       "imgsrc": "img3.jpg", 
+      "thumb": "img3.jpg", 
       "title": "dd", 
       "description": "Descripción",
       "url": "srgs"
      },
     {
+      "id": "1",
       "imgsrc": "img4.jpg", 
+      "thumb": "img4.jpg", 
       "title": "dretgrtgd", 
       "description": "Descripción",
       "url": "xx"
