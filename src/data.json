@@ -18,6 +18,50 @@
     },
     {}
   ],
+  "products": [
+    {
+      "imgsrc": "grafico-1.svg", 
+      "title": "Obra holistica nº1", 
+      "description": "Descripción",
+      "url": "xervrtbgrtx"
+     },
+    {
+      "imgsrc": "grafico-2.svg", 
+      "title": "Obra holistica nº1", 
+      "description": "Descripción",
+      "url": "xervrtbgrtx"
+     },
+    {
+      "imgsrc": "grafico-3.svg", 
+      "title": "dd", 
+      "description": "Descripción",
+      "url": "xgghthyjytjyx"
+     },
+    {
+      "imgsrc": "img3.jpg", 
+      "title": "dd", 
+      "description": "Descripción",
+      "url": "srgs"
+     },
+    {
+      "imgsrc": "img2.jpg", 
+      "title": "dd", 
+      "description": "Descripción",
+      "url": "xgghthyjytjyx"
+     },
+    {
+      "imgsrc": "img3.jpg", 
+      "title": "dd", 
+      "description": "Descripción",
+      "url": "srgs"
+     },
+    {
+      "imgsrc": "img4.jpg", 
+      "title": "dretgrtgd", 
+      "description": "Descripción",
+      "url": "xx"
+    }
+  ],
   "citas": [
     {
       "frase": "Todo según el número, el peso y la medida",
