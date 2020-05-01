@@ -3,10 +3,10 @@
     <Cover
       v-bind:title="titulo_web"
       v-bind:subtitle="slogan_web"
-      bgimg="img10.jpg"
+      bgimg="grafico-2.svg"
     />
 
-    <section class="grid">
+    <section class="ProductGallery grid">
       <h3 class="col-desk-12">Showroom lab</h3>
       <div class="col-desk-6 col-tab-7 col-mob-4">
         <div class="ProductCard">
@@ -26,7 +26,7 @@
         </span>
       </div>
 
-      <div class="col-desk-5 col-tab-3">
+      <div class="col-desk-5 col-tab-3 col-mob-4">
         <div class="thumbnails">
           <div
             v-for="(product, index) in products"
@@ -67,9 +67,6 @@ export default {
     };
   },
   computed: {
-    // currentProduct gets called whenever activeImage changes
-    // and is the reason why we don't have to worry about the
-    // big image getting updated
     currentDescription() {
       return this.products[this.activeProduct].title;
     },
@@ -78,8 +75,6 @@ export default {
     },
   },
   methods: {
-    // Go forward on the images array
-    // or go at the first image if you can't go forward :/
     nextProduct() {
       var active = this.activeProduct + 1;
       if (active >= this.products.length) {
@@ -87,8 +82,6 @@ export default {
       }
       this.activateProduct(active);
     },
-    // Go backwards on the images array
-    // or go at the last image
     prevProduct() {
       var active = this.activeProduct - 1;
       if (active < 0) {
@@ -117,9 +110,13 @@ export default {
 
 .home .Cover {
   // height: 30vh;
+  color: $white;
   @include margin-bottom(2);
 }
 
+.ProductGallery {
+  @include margin-bottom(2);
+}
 .ProductImage {
   background-color: $alpha_white;
   position: relative;
