@@ -39,19 +39,25 @@ export default {
 @import "@/styles/main.scss";
 
 figure {
-  // background-color: red;
   img {
-    @include margin-bottom(-2);
-    transition: all 0.1s ease-in-out;
-      opacity: 0.5;
-    &.active {
-      opacity: 1;
-      transform: scale(1.05);
-    }
+    margin-bottom: 0;
+    transition: opacity .5s ease-in-out;
+  }
+  img.active ~ figcaption {
+    @include padding-top(0);
+    @include margin-top(-1);
+    opacity: 1;
+    animation-name: show;
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+    background-color: $white;
+    border-top: 1px solid $light_grey;
   }
   figcaption {
-    color: $grey;
+    opacity: .5;
+    text-align: left;
     font-style: italic;
+    // @include type-setting(0);
     @include margin-bottom(1);
   }
 }
