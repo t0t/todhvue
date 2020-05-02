@@ -19,28 +19,35 @@ export default {
 <style lang="scss">
 @import "@/styles/main.scss";
 
-.togglemenu.active ~ .BrandLogo {
-  & path {
-    fill: $white;
-  }
-  & circle {
-    fill: $white;
-  }
-  @include media(s0) {
-    left: 36%;
-  }
-  @include media(s1) {
-    left: 43.8%;
-  }
-  @include media(s2) {
-    left: 46%;
-  }
-  @include media(s2) {
-    left: 50%;
-  }
+.toggleButton.active ~ .BrandLogo {
+  // transform: scale(10);
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // margin: auto;
+
+  // top: $h1;
+  // @include media(s0) {
+  //   left: 36%;
+  // }
+  // @include media(s1) {
+  //   left: 43.8%;
+  //   // background-color: red;
+  // }
+  // @include media(s2) {
+  //   left: 46%;
+  // }
+  // @include media(s3) {
+  //   left: 50%;
+  // }
+  // & path {
+  //   fill: $white;
+  // }
+  // & circle {
+  //   fill: $white;
+  // }
 }
 .BrandLogo {
-  z-index: 1000;
   height: 50px;
   width: 50px;
   padding: 10px;

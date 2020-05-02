@@ -1,8 +1,18 @@
 // ****************************************
 // BASE
 // ****************************************
+#app {
+  font-family: $primary_font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
 body {
   background-color: $white;
+  &.overflowHidden {
+    overflow: hidden;
+  }
 }
 small {
   display: block;
