@@ -1,7 +1,5 @@
 <template>
-  <blockquote 
-  class="BlockQuote"
-  v-on:click="lanzaAccion">
+  <blockquote class="BlockQuote">
     <p>{{ cita }}</p>
     <small>{{ author }}</small>
   </blockquote>
@@ -14,11 +12,6 @@ export default {
     author: String,
     cita: String,
   },
-  methods: {
-    lanzaAccion() {
-      console.log("Accion lanzada");
-    },
-  },
 };
 </script>
 
@@ -26,39 +19,40 @@ export default {
 @import "@/styles/main.scss";
 
 .BlockQuote {
-    // display: block;
-    padding-left: $h2;
-    border-left-color: $secondary;
-    border-left-style: solid;
-    border-left-width: 1px;
-    // width: 100%;
-    @include margin-top(0);
-    @include margin-bottom(2);
+  // display: block;
+  padding-left: $h2;
+  border-left-color: $secondary;
+  border-left-style: solid;
+  border-left-width: 1px;
+  // width: 100%;
+  @include margin-top(0);
+  @include margin-bottom(2);
 
-    p {
+  p {
     color: $grey;
-        font-style: italic;
-        margin-bottom: $h-2;
-        quotes: "«" "»";
-        &::first-letter {
-            font-size: 40px;
-           font-weight: bold;
-           position: absolute;
-           top: -200px;
-        }
-        &::before {
-            content: open-quote;
-        }
-        &::after {
-            content: close-quote;
-        }
-        // @include margin-bottom(1);
+    font-style: italic;
+    margin-bottom: $h-2;
+    quotes: "«" "»";
+    &::first-letter {
+      font-size: 40px;
+      font-weight: bold;
+      position: absolute;
+      top: -200px;
     }
-    small {
-        font-weight: bold;
-        padding-bottom: 0;
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+    // @include margin-bottom(1);
+  }
+  small {
+    font-weight: bold;
+    padding-bottom: 0;
     color: $primary;
-    }
-    @include media(s0) {}
+  }
+  @include media(s0) {
+  }
 }
 </style>

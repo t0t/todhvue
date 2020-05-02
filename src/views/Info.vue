@@ -21,13 +21,13 @@
         De la mente concreta a la mente abstracta
       </h4>
       <div class="col-desk-12">
-        <FigureImage caption="Description 2" imagen="/img/grafico-5.svg" />
+        <Figure caption="Description 2" imagen="/img/grafico-5.svg" />
       </div>
       <p class="col-desk-4 col-tab-5 col-mob-4">
         Estos últimos años se ha ido consolidando una manera de ver la realidad.
       </p>
       <div class="col-desk-8 col-tab-5 col-mob-4">
-        <FigureImage caption="Description 8" imagen="/img/grafico-8.svg" />
+        <Figure caption="Description 8" imagen="/img/grafico-8.svg" />
       </div>
       <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
@@ -36,13 +36,15 @@
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
 
-      <BlockQuote
-        cita="Todo según el número."
-        author="Pitagoras de Samos - S.V a. C."
-      />
+      <div class="col-desk-5">
+        <BlockQuote
+          cita="Todo según el número."
+          author="Pitagoras de Samos - S.V a. C."
+        />
+      </div>
 
       <div class="col-desk-5">
-        <FigureImage caption="Description 12" imagen="/img/grafico-1.svg" />
+        <Figure caption="Description 12" imagen="/img/grafico-1.svg" />
       </div>
       <p class="col-desk-12 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
@@ -51,7 +53,7 @@
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
       <div id="#todh" class="col-desk-8">
-        <FigureImage caption="Description 2" imagen="/img/grafico-2.svg" />
+        <Figure caption="Description 2" imagen="/img/grafico-2.svg" />
       </div>
       <p class="col-desk-4 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
@@ -66,10 +68,13 @@
         desarrollo de la mente abstracta frente al de la mente concreta.
       </p>
       <div class="col-desk-5 col-tab-5 col-mob-4">
-        <FigureImage caption="Description 2" imagen="/img/grafico-3.svg" />
+        <Figure caption="Description 2" imagen="/img/grafico-3.svg" />
       </div>
       <div class="col-desk-5 col-tab-5 col-mob-4">
-        <FigureImage caption="Description 3" imagen="/img/grafico-5.svg" />
+        <Figure caption="Description 3" imagen="/img/grafico-5.svg" />
+      </div>
+      <div class="col-desk-5 col-tab-5 col-mob-4">
+        <Figure caption="Description of the image" imagen="/img/grafico-7.svg" />
       </div>
       <p class="col-desk-7 col-tab-5 col-mob-4">
         En este sentido su proyecto aboga por una reconexión incursiva con la
@@ -79,28 +84,27 @@
       </p>
 
       <div class="col-desk-12">
-        <h5>A dotted list component:</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, atque. Deserunt, quo delectus expedita repellendus fugiat animi veniam. Ea modi aperiam unde deserunt iure commodi temporibus, qui autem dolorem debitis.</p>
       </div>
+
+      <div class="col-desk-12 col-tab-10 col-mob-4">
+        <h5>A dotted list component:</h5>
       <List>
         <item-list v-for="intereses in lista_intereses" v-bind:key="intereses">
-          <navigation-item>{{ intereses }}</navigation-item>
+          {{ intereses }}
         </item-list>
       </List>
+      </div>
 
-      <div class="col-desk-5 col-tab-5 col-mob-4">
+      <div class="col-desk-8 col-tab-5 col-mob-4">
         <BlockQuote
           author="Guy Murchie, The Seven Mysteries of Life: An Exploration of Science and Philosophy"
           cita="The Fibonacci Sequence turns out to be the key to understanding how nature designs... and is... a part of the same ubiquitous music of the spheres that builds harmony into atoms, molecules, crystals, shells, suns and galaxies and makes the Universe sing."
         />
-
-        <FigureImage
-          caption="Description of the image"
-          imagen="/img/grafico-7.svg"
-        />
       </div>
 
-      <div class="col-desk-5 col-tab-5 col-mob-4">
-        <FigureImage caption="Description 2" imagen="/img/grafico-1.svg" />
+      <div class="col-desk-4 col-tab-5 col-mob-4">
+        <Figure caption="Tetraktys Pitagórica. 1+2+3+4 = 10 = 1 + 0 = 1 (La Unidad)" imagen="/img/grafico-1.svg" />
       </div>
     </article>
 
@@ -122,9 +126,8 @@ import BaseLayout from "@/components/layout/BaseLayout.vue";
 import PageHeader from "@/components/organos/PageHeader.vue";
 import BlockQuote from "@/components/atoms/BlockQuote.vue";
 import List from "@/components/molecules/List.vue";
-import FigureImage from "@/components/molecules/FigureImage.vue";
+import Figure from "@/components/molecules/Figure.vue";
 import ItemList from "@/components/molecules/ItemList.vue";
-import NavigationItem from "@/components/atoms/NavigationItem.vue";
 import Card from "@/components/molecules/Card.vue";
 import Footer from "@/components/molecules/Footer.vue";
 import todh_data from "@/data";
@@ -145,9 +148,8 @@ export default {
     PageHeader,
     BlockQuote,
     List,
-    FigureImage,
+    Figure,
     Card,
-    NavigationItem,
     ItemList,
     Footer,
   },
