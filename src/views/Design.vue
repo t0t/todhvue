@@ -1,10 +1,12 @@
 <template>
-  <div class="design">
-    <PageHeader
-      v-bind:title="titulo_diseno"
-      v-bind:subtitle="slogan_web"
-      bgimg="img10.jpg"
-    />
+  <base-layout>
+    <template slot="header">
+      <PageHeader
+        v-bind:title="titulo_diseno"
+        v-bind:subtitle="slogan_web"
+        bgimg="img10.jpg"
+      />
+    </template>
 
     <Card
       bgimg="img4.jpg"
@@ -49,19 +51,19 @@
       feature3="Static site deployed in seconds"
       feature3b="Testing on real devices"
     />
-    <Footer />
-  </div>
+    <template slot="footer">
+      <Footer />
+    </template>
+  </base-layout>
 </template>
 
 <script>
-// @ is an alias to /src
+import todh_data from "@/data";
+import BaseLayout from "@/components/layout/BaseLayout.vue";
 import Card from "@/components/molecules/Card.vue";
 import Features from "@/components/molecules/Features.vue";
 import PageHeader from "@/components/organos/PageHeader.vue";
 import Footer from "@/components/molecules/Footer.vue";
-// import Cover from "@/components/organos/Cover.vue";
-import todh_data from "@/data";
-// console.log(slogans);
 
 export default {
   name: "Design",
@@ -70,16 +72,14 @@ export default {
       titulo_diseno: todh_data.main_personal_areas[0].diseno.title,
       slogan_web: todh_data.main_personal_areas[0].diseno.slogans[0].web,
       cita_todh: todh_data.main_personal_areas[0].diseno.citas[0],
-      // cita_todh2: todh_data.main_personal_areas[0].todh.citas[1],
-      // lista_intereses: todh_data.intereses
     };
   },
   components: {
+    BaseLayout,
     Card,
-    // Cover,
     PageHeader,
     Features,
-    Footer,
-  },
+    Footer
+  }
 };
 </script>

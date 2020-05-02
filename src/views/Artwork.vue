@@ -1,18 +1,18 @@
 <template>
-  <section class="artwork">
-    <PageHeader
-      v-bind:title="titulo_arte"
-      v-bind:subtitle="slogan_arte"
-      bgimg="img9.jpg"
-    />
+  <base-layout>
+    <template slot="header">
+      <PageHeader
+        v-bind:title="titulo_arte"
+        v-bind:subtitle="slogan_arte"
+        bgimg="img9.jpg"
+      />
+    </template>
 
     <article class="grid">
       <div class="col-desk-12 col-tab-6 col-mob-4">
         <img src="/img/detalle3.jpg" />
       </div>
-      <h3
-        class="col-desk-10 col-tab-3 col-mob-4"
-      >
+      <h3 class="col-desk-10 col-tab-3 col-mob-4">
         Incursión en la Creación misma
       </h3>
       <p
@@ -56,19 +56,18 @@
       feature3="Proceso"
       feature3b="Sin fin"
     />
-    <Footer />
-  </section>
+    <template slot="footer">
+      <Footer />
+    </template>
+  </base-layout>
 </template>
 
 <script>
-/* eslint-disable */
+import todh_data from "@/data";
+import BaseLayout from "@/components/layout/BaseLayout.vue";
 import PageHeader from "@/components/organos/PageHeader.vue";
-import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
 import Features from "@/components/molecules/Features.vue";
 import Footer from "@/components/molecules/Footer.vue";
-
-import todh_data from "@/data";
-// console.log(slogans);
 
 export default {
   name: "Artwork",
@@ -80,10 +79,10 @@ export default {
     };
   },
   components: {
+    BaseLayout,
     PageHeader,
-    BioExcerpt,
     Features,
-    Footer
+    Footer,
   },
 };
 </script>

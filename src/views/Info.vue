@@ -1,10 +1,12 @@
 <template>
-  <section class="info">
-    <PageHeader
-      v-bind:title="titulo_todh"
-      v-bind:subtitle="slogan_web"
-      bgimg="bg7.jpg"
-    />
+  <base-layout>
+    <template slot="header">
+      <PageHeader
+        v-bind:title="titulo_todh"
+        v-bind:subtitle="slogan_web"
+        bgimg="bg7.jpg"
+      />
+    </template>
 
     <Card
       bgimg="svg_anim.svg"
@@ -94,14 +96,14 @@
       v-bind:text="cita_todh2.bloque"
     />
 
-    <Footer />
-  </section>
+    <template slot="footer">
+      <Footer />
+    </template>
+  </base-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-// import Cover from "@/components/organos/Cover.vue";
-// import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
+import BaseLayout from "@/components/layout/BaseLayout.vue";
 import PageHeader from "@/components/organos/PageHeader.vue";
 import List from "@/components/molecules/List.vue";
 import ItemList from "@/components/molecules/ItemList.vue";
@@ -109,7 +111,6 @@ import NavigationItem from "@/components/atoms/NavigationItem.vue";
 import Card from "@/components/molecules/Card.vue";
 import Footer from "@/components/molecules/Footer.vue";
 import todh_data from "@/data";
-// console.log(slogans);
 
 export default {
   name: "Info",
@@ -123,14 +124,13 @@ export default {
     };
   },
   components: {
-    // Cover,
-    // BioExcerpt,
+    BaseLayout,
     PageHeader,
     List,
     Card,
     NavigationItem,
     ItemList,
-    Footer,
-  },
+    Footer
+  }
 };
 </script>

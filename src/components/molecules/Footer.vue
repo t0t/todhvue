@@ -1,22 +1,18 @@
 <template>
-  <footer class="Footer">
+  <div class="Footer">
     <div class="grid">
-      
-        <BioExcerpt
-          v-bind:header="bio.author"
-          v-bind:txt="bio.bio"
-          v-bind:imagen="require('@/assets/' + bio.avatar)"
-        />
-
+      <BioExcerpt
+        v-bind:header="bio.author"
+        v-bind:txt="bio.bio"
+        v-bind:imagen="require('@/assets/' + bio.avatar)"
+      />
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
 import BioExcerpt from "@/components/molecules/BioExcerpt.vue";
-
 import todh_data from "@/data";
-// console.log(todh_data);
 
 export default {
   name: "Footer",
@@ -25,12 +21,12 @@ export default {
   },
   data: () => {
     return {
-      bio: todh_data
-    }
+      bio: todh_data,
+    };
   },
   components: {
-    BioExcerpt
-  }
+    BioExcerpt,
+  },
 };
 </script>
 
