@@ -1,19 +1,19 @@
 <template>
   <li class="col-desk-3 col-tab-5 col-mob-4">
     <slot>
-      <navigation-link url="#laurl"> </navigation-link>
+      <navigation-item url="#laurl"> </navigation-item>
     </slot>
   </li>
 </template>
 
 <script>
-import NavigationLink from "@/components/atoms/NavigationLink.vue";
+import NavigationItem from "@/components/atoms/NavigationItem.vue";
 
 export default {
   name: "item-list",
   props: {},
   components: {
-    NavigationLink
+    NavigationItem
   }
 };
 </script>
