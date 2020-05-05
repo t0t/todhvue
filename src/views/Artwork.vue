@@ -2,11 +2,12 @@
   <base-layout>
     <template slot="header">
       <PageHeader
-        v-bind:title="titulo_arte"
-        v-bind:subtitle="slogan_arte"
-        bgimg="img9.jpg"
+        v-bind:title="currentPage.name"
+        v-bind:subtitle="currentPage.description"
       />
     </template>
+
+    <Gallery />
 
     <article class="grid">
       <div class="col-desk-12 col-tab-6 col-mob-4">
@@ -63,7 +64,8 @@
 </template>
 
 <script>
-import todh_data from "@/data";
+import axios from "axios";
+import Gallery from "@/components/organos/Gallery";
 import BaseLayout from "@/components/layout/BaseLayout.vue";
 import PageHeader from "@/components/organos/PageHeader.vue";
 import Features from "@/components/molecules/Features.vue";
@@ -73,16 +75,41 @@ export default {
   name: "Artwork",
   data: () => {
     return {
-      titulo_arte: todh_data.main_personal_areas[0].arte.title,
-      slogan_arte: todh_data.main_personal_areas[0].arte.slogans[0].web,
-      bio: todh_data,
+      currentPage: {},
+      // bio: todh_data,
     };
+  },
+  created() {
+    // this.getProducts();
+  },
+  mounted() {
+    axios.get("db.json")
+      .then(res => {
+        this.currentPage = res.data[0].pages[1];
+        console.log(this.currentPage);
+      })
+      .catch(err => {
+        console.log(err);
+      });    
   },
   components: {
     BaseLayout,
     PageHeader,
     Features,
+    Gallery,
     Footer,
   },
+  methods: {
+    // getProducts() {
+    //   axios.get("db.json")
+    //   .then(res => {
+    //     this.products = res.data[1].productos;
+    //     // console.log(res.data[1].productos);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
+    // },
+  }
 };
 </script>
