@@ -1,64 +1,70 @@
-[
-  {
-    "pages": [
-      {
-        "id": "1",
-        "name": "Home",
-        "url": "/img/img2.jpg",
-        "description": "Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
-      },
-      {
-        "id": "2",
-        "name": "Sentir la Creación",
-        "url": "/img/img3.jpg",
-        "description": "Obras y proceso"
-      },
-      {
-        "id": "3",
-        "name": "Info",
-        "url": "/img/img6.jpg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
-      },
-      {
-        "id": "4",
-        "name": "Design",
-        "url": "/img/detalle3.jpg",
-        "description": "Recusandae enim laboriosam earum id mollitia vitae nisi."
-      }
-    ]
-  },
-  {
-    "productos": [
-      {
-        "id": "1",
-        "name": "Nombre del producto nº1",
-        "url": "/img/img2.jpg",
-        "description": "Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
-      },
-      {
-        "id": "2",
-        "name": "Nombre del producto nº2",
-        "url": "/img/img3.jpg",
-        "description": "Dolor sit amet consectetur adipisicing elit. Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
-      },
-      {
-        "id": "3",
-        "name": "Nombre del producto nº3",
-        "url": "/img/img6.jpg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
-      },
-      {
-        "id": "4",
-        "name": "Nombre del producto nº4",
-        "url": "/img/detalle3.jpg",
-        "description": "Recusandae enim laboriosam earum id mollitia vitae nisi."
-      },
-      {
-        "id": "5",
-        "name": "Nombre del producto nº5",
-        "url": "/img/detalle3.jpg",
-        "description": "Id mollitia vitae nisi."
-      }
-    ]
-  }
-]
+{
+  "pages": [
+    {
+      "id": "1",
+      "name": "Home",
+      "url": "/img/img2.jpg",
+      "description": "Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
+    },
+    {
+      "id": "2",
+      "name": "Sentir la Creación",
+      "url": "/img/img3.jpg",
+      "description": "Obras y proceso"
+    },
+    {
+      "id": "3",
+      "name": "Info",
+      "url": "/img/img6.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
+    },
+    {
+      "id": "4",
+      "name": "Design",
+      "url": "/img/detalle3.jpg",
+      "description": "Recusandae enim laboriosam earum id mollitia vitae nisi."
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "name": "Nombre del producto nº1",
+      "url": "/info",
+      "imagen": "img11.jpg",
+      "thumb": "th-img11.jpg",
+      "description": "Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
+    },
+    {
+      "id": "2",
+      "name": "Nombre del producto nº22",
+      "url": "/info",
+      "imagen": "img3.jpg",
+      "thumb": "th-img1.jpg",
+      "description": "Dolor sit amet consectetur adipisicing elit. Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
+    },
+    {
+      "id": "3",
+      "name": "Nombre del producto nº3",
+      "url": "/info",
+      "imagen": "img6.jpg",
+      "thumb": "img6.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellendus laudantium ducimus culpa placeat fugiat, libero numquam. Iure eligendi obcaecati, ratione accusamus recusandae enim laboriosam earum id mollitia vitae nisi."
+    },
+    {
+      "id": "4",
+      "name": "Nombre del producto nº4x",
+      "url": "/info",
+      "imagen": "detalle3.jpg",
+      "thumb": "detalle3.jpg",
+      "description": "Recusandae enim laboriosam earum id mollitia vitae nisi."
+    },
+    {
+      "id": "5",
+      "name": "Nombre del producto nº5",
+      "url": "/info",
+      "imagen": "detalle3.jpg",
+      "thumb": "detalle3.jpg",
+      "description": "Id mollitia vitae nisi."
+    }
+  ]
+}

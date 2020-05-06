@@ -7,7 +7,7 @@
       />
     </template>
 
-    <Gallery />
+    <ProductGallery />
 
     <article class="grid">
       <div class="col-desk-12 col-tab-6 col-mob-4">
@@ -65,7 +65,7 @@
 
 <script>
 import axios from "axios";
-import Gallery from "@/components/organos/Gallery";
+import ProductGallery from "@/components/organos/ProductGallery";
 import BaseLayout from "@/components/layout/BaseLayout.vue";
 import PageHeader from "@/components/organos/PageHeader.vue";
 import Features from "@/components/molecules/Features.vue";
@@ -76,27 +76,23 @@ export default {
   data: () => {
     return {
       currentPage: {},
-      // bio: todh_data,
     };
-  },
-  created() {
-    // this.getProducts();
   },
   mounted() {
     axios.get("db.json")
       .then(res => {
-        this.currentPage = res.data[0].pages[1];
+        this.currentPage = res.data.pages[1];
         console.log(this.currentPage);
       })
       .catch(err => {
         console.log(err);
-      });    
+      });       
   },
   components: {
     BaseLayout,
     PageHeader,
     Features,
-    Gallery,
+    ProductGallery,
     Footer,
   },
   methods: {

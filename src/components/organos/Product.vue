@@ -2,7 +2,7 @@
   <div class="CardItem" v-cloak>
     <h5>{{ product.name }}</h5>
     <figure>
-      <img :src="product.url">
+      <img :src="'/img/' + product.img_src">
       <figcaption>{{ product.description }}</figcaption>
     </figure>
   </div>

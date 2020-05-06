@@ -3,11 +3,10 @@
     <div class="col-desk-7 col-tab-5 col-mob-4">
       <div class="ProductCard">
         <div class="ProductImage">
-          <img :src="'/img/' + currentProduct" :alt="currentDescription" />
+          <img :src="'./img/' + currentProduct" :alt="currentDescription" />
         </div>
       </div>
     </div>
-
     <div class="col-desk-5 col-tab-5 col-mob-4">
       <div class="actions">
         <span @click="prevProduct" class="prev">
@@ -17,39 +16,53 @@
           &#10095;
         </span>
       </div>
+
       <div class="thumbnails">
         <div
-          v-for="(product, index) in products"
-          :key="product.id"
           :class="['thumbnail-image', activeProduct == index ? 'active' : '']"
-          @click="activateProduct(index)"
+          v-for="(producto, index) in products"
+          v-bind:key="producto.id"
         >
-          <img :src="'/img/' + product.thumb" />
+          <img
+            v-on:click="activateProduct(index)"
+            :src="'./img/' + producto.thumb"
+            :title="producto.name"
+          />
         </div>
-      </div>
-      <div class="ProductCaption">
-        <h6>{{ currentTitle }}</h6>
-        <small>{{ currentDescription }}</small>
-        <button class="ButtonDefault">
-          <router-link :to="currentLink">Más info</router-link>
-        </button>
+
+        <div class="ProductCaption">
+          <h6>{{ currentTitle }}</h6>
+          <small>{{ currentDescription }}</small>
+          <button class="ButtonDefault">
+            <a :href="'/#' + currentLink">Más info</a>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import todh_data from "@/data";
-// console.log(todh_data);
+import axios from "axios";
 
 export default {
   name: "ProductGallery",
   data: () => {
     return {
+      products: [{}],
       activeProduct: 0,
-      timer: null,
-      products: todh_data.products,
     };
+  },
+  created() {
+    axios
+      .get("db.json")
+      .then((res) => {
+        this.products = res.data.productos;
+        console.log(this.products);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   computed: {
     currentDescription() {
@@ -59,10 +72,10 @@ export default {
       return this.products[this.activeProduct].url;
     },
     currentTitle() {
-      return this.products[this.activeProduct].title;
+      return this.products[this.activeProduct].name;
     },
     currentProduct() {
-      return this.products[this.activeProduct].imgsrc;
+      return this.products[this.activeProduct].imagen;
     },
   },
   methods: {
@@ -111,7 +124,7 @@ export default {
   align-content: center;
   padding: 0;
   img {
-    max-width: 100%;
+    // max-width: 150px;
     margin-bottom: 0;
   }
 }
